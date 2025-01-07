@@ -9,21 +9,23 @@
         .sticky {
             position: fixed;
             top: 0;
-            left: 50%;
             width: 100%;
             z-index: 1000;
             transition: all 0.3s ease;
             padding: 0 145px; /* Add horizontal padding to the navbar */
             box-sizing: border-box; /* Make sure padding is included in the dimensions */
             display: flex; /* Enable flexbox layout for the nav items */
-            align-items: center; /* Vertically center the menu items */
+            justify-content: center;
         }
         .scrolled {
             background-color: rgba(0, 0, 0, 0.5);
             padding: 10px;
             color: #ffc107; /* Improve text visibility */
-            justify-content: space-evenly; /* Spread items evenly between the start and end */
+            justify-content: space-between; /* Spread items evenly between the start and end */
         <div class="scrolled">Some content here</div>
+        }
+        .menu-item {
+            margin: 0 10px; /* Optional: Add spacing between menu items */
         }
 
         button {
@@ -57,7 +59,7 @@
             <span>Infographics</span>
         </h1>
     </div>
-</div>
+
     <div class="navbar sticky">
         <a href="home.html">
             <img src="images/logo.png" class="logo" alt="logo">
@@ -71,6 +73,7 @@
             <li><a href="about.html">About</a></li>
         </ul>
     </div>
+</div>
 
 <main>
     <section id="infographics-slider">
