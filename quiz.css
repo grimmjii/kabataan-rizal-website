@@ -1,0 +1,151 @@
+/* For the entire page background */
+body {
+    margin: 0;
+    height: 100vh; /* Full screen height */
+    background-image: url(images/luneta_park.jpg);
+    background-size: cover; /* Ensures it covers the entire screen */
+    background-position: 0 0;
+}
+
+/* Quiz Banner */
+.quiz-banner {
+    width: 100%;
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)), url(images/Rizal_Monument_on_Rizal_Day.jpg);
+    background-size: cover;
+    background-position: 40% 40%;
+    height: 150px; /* Cropped to half of the original height */
+    position: relative;
+    z-index: 1;
+}
+
+/* Quiz Container */
+.quiz-container {
+    max-width: 900px;
+    padding: 40px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 2px solid #900c3f; /* Deep red border to match the theme */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Optional - adds a soft shadow */
+    z-index: 0;
+    position: relative;
+    margin: 200px auto 0;
+}
+
+/* Quiz Question */
+.quiz-question {
+    font-size: 28px;
+    margin-bottom: 30px;
+    font-weight: bold;
+    color: #900c3f; /* Deep red color for the question */
+
+}
+
+/* Options */
+.quiz-options {
+    display: flex;
+    flex-direction: row; /* Ensures buttons are in a vertical stack */
+    gap: 25px; /* Adds consistent spacing between buttons */
+    position: relative;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.quiz-options button {
+    border: none;
+    font-size: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #900c3f; /* Deep red matching theme */
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.quiz-options button:hover {
+    transform: scale(1.05);
+    background-color: #ffc107; /* Yellow on hover */
+    color: #000; /* Black text on hover for accessibility */
+}
+
+.quiz-options button.selected.correct {
+    background-color: #4caf50; /* Green for correct */
+}
+
+.quiz-options button.selected.wrong {
+    background-color: #f44336; /* Red for wrong */
+}
+
+.quiz-options button.correct-answer {
+    background-color: #4caf50; /* Green to show the correct answer */
+    color: #fff;
+}
+
+/* Next Button */
+#next-btn {
+    margin-top: 20px;
+    padding: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #900c3f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    left: 95%;
+    transform: translateX(-50%);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#next-btn:hover {
+    background-color: #ffc107; /* Turns gold */
+    color: black;
+}
+
+#next-btn:disabled {
+    background-color: #d3d3d3; /* Gray for disabled */
+    cursor: not-allowed;
+}
+
+/* Quiz Result Section */
+.quiz-result {
+    display: none; /* Hidden until the quiz is completed */
+    padding: 40px;
+    font-size: 20px;
+    text-align: center;
+    max-width: 900px;
+    background-color: rgba(255, 251, 231, 0.8);
+    border: 2px solid #900c3f; /* Deep red border to match the theme */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Optional - adds a soft shadow */
+    z-index: 0;
+    position: relative;
+    margin: 200px auto 0;
+}
+
+.quiz-result h2 {
+    color: #900c3f;
+    font-size: 30px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.quiz-result button {
+    padding: 10px 15px;
+    background-color: #900c3f;
+    color: white;
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 8px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.quiz-result button:hover {
+    background-color: #ffc107; /* Gold hover */
+    color: black;
+}

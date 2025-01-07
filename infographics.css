@@ -1,0 +1,339 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Playfair Display', serif;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+.banner{
+    width: 100%;
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)), url(images/luneta_park.jpg);
+    background-size: cover;
+    background-position: 50% 50%;
+    height: 350px; /* Cropped to half of the original height */
+    position: relative;
+    z-index: 1;
+}
+
+.navbar {
+    width: 85%;
+    max-width: 1400px;
+    margin: auto;
+    padding: 15px 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+}
+@media (max-width: 768px) {
+    .navbar {
+        width: 100%; /* Full width for narrow viewports */
+    }
+}
+
+.logo{
+    width: 120px;
+    cursor: pointer;
+}
+
+.navbar ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 10px 20px;
+    position: relative;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'open sans', serif;
+    font-weight: 700;
+    font-size: 1.2em;
+}
+
+.navbar ul li a:hover {
+    color: #ffc107; /* Change font color to yellow when hovered */
+}
+.navbar ul li::after{
+    content:'';
+    height: 3px;
+    width: 0;
+    background: #900c3f;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+.navbar ul li:hover::after{
+    width: 100%;
+}
+
+.content {
+    position: absolute; /* Stays positioned inside .banner */
+    top: 70%; /* Centers vertically */
+    left: 50%; /* Centers horizontally */
+    transform: translate(-50%, -50%); /* Perfect horizontal and vertical centering */
+    color: white;
+    text-align: center;
+    width: 100%;
+}
+
+.content span {
+    display: inline-block; /* More consistent padding handling */
+    padding: 2px 5px; /* Space around the text, if needed */
+    border-radius: 0.3rem; /* Optional: Rounded edges for the background */
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        width: 100%;
+    }
+    .content h1 {
+        font-size: 2rem;
+        font-weight: bold;
+        margin-top: 0;
+    }
+}
+
+/* Main Section Styles */
+main {
+    padding: 20px;
+    margin: 20px auto;
+    width: 70%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main span {
+    font-weight: bold;
+    color: #007BFF; /* Rizal-inspired blue */
+}
+
+main section {
+    margin-bottom: 20px;
+    background-color: #fffff0;
+    display: inline-block;
+    padding: 10px 30px; /* Space around the text, if needed */
+    border-radius: 3px; /* Optional: Rounded edges for the background */
+}
+main h2 {
+    color: #900c3f;
+    border-bottom: 3px solid #ffc107;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+/* Carousel Section */
+#infographics-slider {
+    position: relative;
+    max-width: 800px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.slider {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    margin: 0 auto;
+    z-index: 1; /* A lower z-index than the modal */
+}
+
+.slide {
+    display: none; /* Hide all slides by default */
+    width: 100%;
+    text-align: center;
+}
+
+.slide.active {
+    display: block; /* Show the current active slide */
+}
+
+.slide img {
+    width: 100%;
+    height: 90%; /* Adjust this to set how large the image appears */
+    object-fit: cover; /* Ensures images fill the space */
+    border-bottom: 2px solid #ddd;
+}
+
+.slide p {
+    margin: 10px 0;
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+    border-bottom: 3px solid #ffc107;
+    display: inline-block;
+
+}
+
+/* Navigation Buttons */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 24px;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+/* For Smooth Transition on Active Slides */
+.slider {
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Modal Base - Initially Hidden */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    display: none; /* Hide modal by default */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    z-index: 9999; /* Appear above everything else */
+}
+
+/* When the modal is visible */
+.modal.active {
+    display: block;
+}
+
+/* Modal Content */
+.modal-content {
+    position: fixed; /* Anchors it to the viewport */
+    top: 50%; /* Set the top to 50% of the viewport */
+    left: 50%; /* Set the left to 50% of the viewport */
+    transform: translate(-50%, -50%); /* Perfectly centers content */
+    background-color: white;
+    width: 80%; /* Adjust the width to your needs */
+    max-width: 900px; /* Constrain max width */
+    max-height: 80vh; /* Constrain the height */
+    overflow-y: auto; /* Scroll when content overflows */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Additional Styling for Nested Divs */
+.modal-content div {
+    margin-bottom: 10px; /* Add spacing between nested elements */
+}
+
+/* Scrollbar Customization */
+.modal-content::-webkit-scrollbar {
+    width: 8px; /* Width of scrollbar */
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+    background-color: #888; /* Scrollbar color */
+    border-radius: 5px;
+}
+
+.modal-content::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+}
+
+.modal-content::-webkit-scrollbar-track {
+    background: #f0f0f0;
+}
+
+/* Close Button */
+.modal-content .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 50px;
+    font-family: sans-serif;
+    color: #900c3f;
+    cursor: pointer;
+    background: none;
+    border: none;
+    font-weight: bold;
+}
+
+.modal-content .close:hover {
+    color: #ffc107; /* Yellow hover effect */
+}
+
+.modal-content.modal-open {
+    display: block;
+}
+
+.custom-content-wrapper {
+    display: none; /* Default hidden */
+    /* Custom content styles */
+}
+.custom-content-wrapper.content-visible {
+    display: block;
+}
+
+/* Hover effect for close button */
+.close:hover,
+.close:focus {
+    color: #900c3f;
+    text-decoration: none; /* No underline */
+    cursor: pointer;
+}
+
+.modal {
+    transition: opacity 0.3s ease-in-out; /* Fade effect */
+}
+.modal.show {
+    display: block; /* Show */
+    opacity: 1; /* Fully visible */
+}
+.modal.hide {
+    opacity: 0; /* Hidden */
+    display: none; /* Fully hides after transition */
+}
+
+/* Footer Styles */
+footer {
+    background: #900c3f;
+    color: white;
+    text-align: center;
+    font-size: 0.80rem;
+    padding: 10px 0;
+    margin-top: 20px;
+    border-top: 5px solid #ffc107;
+}
+
+footer p {
+    margin: 0;
+}

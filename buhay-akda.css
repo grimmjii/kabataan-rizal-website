@@ -1,0 +1,293 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Playfair Display', serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow: auto;
+    overflow-x: visible;
+}
+
+.banner{
+    width: 100%;
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)), url(images/park.jpg);
+    background-size: cover;
+    background-position: 50% 50%;
+    height: 350px; /* Cropped to half of the original height */
+    position: relative;
+    overflow: hidden;
+}
+
+.navbar {
+    width: 100%;
+    padding: 10px 0; /* Reduced padding to make it smaller */
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 8px 0; /* Smaller padding on smaller screens */
+    }
+}
+
+.logo {
+    width: 100px; /* Reduced logo size */
+    cursor: pointer;
+}
+
+.navbar ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 30px; /* Reduced margin for menu items */
+    position: relative;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'open sans', serif;
+    font-weight: 700;
+    font-size: 1em; /* Reduced font size */
+}
+
+.navbar ul li a:hover {
+    color: #ffc107;
+}
+
+.navbar ul li::after {
+    content: '';
+    height: 2px; /* Reduced underline height */
+    width: 0;
+    background: #900c3f;
+    position: absolute;
+    left: 0;
+    bottom: -8px; /* Adjusted position for the underline */
+    transition: 0.5s;
+}
+
+.navbar ul li:hover::after {
+    width: 100%;
+}
+
+.content{
+    position: absolute; /* Stays positioned inside .banner */
+    top: 70%; /* Centers vertically */
+    left: 50%; /* Centers horizontally */
+    transform: translate(-50%, -50%); /* Perfect horizontal and vertical centering */
+    color: white;
+    text-align: center;
+    width: 100%;
+}
+
+.content span {
+    display: inline-block; /* More consistent padding handling */
+    padding: 2px 5px; /* Space around the text, if needed */
+    border-radius: 0.3rem; /* Optional: Rounded edges for the background */
+}
+
+/* Main Section Styles */
+main {
+    flex-wrap: wrap; /* Wrap flex layout for smaller screens */
+    padding: 20px;
+    margin: 20px auto;
+    width: 70%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main span {
+    font-weight: bold;
+    color: #007BFF; /* Rizal-inspired blue */
+}
+
+main section {
+    margin-bottom: 20px;
+    background-color: #fffff0; /* Slightly increase contrast */
+    display: inline-block;
+    padding: 10px 30px; /* Space around the text, if needed */
+    border-radius: 3px; /* Optional: Rounded edges for the background */
+}
+main h2 {
+    color: #900c3f;
+    border-bottom: 3px solid #ffc107;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+main h3 {
+    color: #000000;
+    font-weight: bold;
+    border-bottom: 3px solid #ffc107;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+main h4 {
+    color: #000000;
+    border-bottom: 3px solid #ffc107;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+/* Works Section */
+#works {
+    padding: 20px;
+    background-color: white; /* Light background for contrast */
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+/* Works Container */
+.works-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center; /* Center align the flex items */
+}
+
+/* Ensure the work-item container adopts flex-column layout */
+.work-item {
+    background: #fffff0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    max-width: 300px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center children horizontally */
+    position: relative; /* Set positioning for hover effect */
+    padding: 10px; /* Add space inside cards */
+}
+
+.work-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; /* Ensure the image fits nicely within its container */
+    margin-bottom: 10px;
+}
+
+/* Hide <p>, <h3>, and <ul> elements by default */
+.work-item p, .work-item h3, .work-item ul {
+    opacity: 0; /* Fully invisible */
+    height: 0; /* No space allocated */
+    transition: opacity 0.3s ease, height 0.3s ease; /* Smooth hover transition */
+    overflow: hidden; /* Prevent content overflow while hidden */
+    margin: 0; /* Avoid margin issues */
+}
+
+/* On hover: <p>, <h3>, and <ul> become visible */
+.work-item:hover p,
+.work-item:hover h3,
+.work-item:hover ul {
+    opacity: 1; /* Fully visible */
+    height: auto; /* Expand to full content height */
+    margin-bottom: 10px; /* Add spacing after visibility */
+}
+
+/* Ensure the <ul> is styled properly */
+.work-item ul {
+    list-style-type: disc; /* Standard bullet points */
+    padding-left: 20px; /* Indent list items for clarity */
+    color: #333; /* Text color */
+    font-size: 14px; /* Font size for readability */
+}
+
+/* Clean hover design for <a> button */
+.learn-more {
+    margin-top: 10px;
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 14px;
+    color: white;
+    background-color: #900c3f; /* Button color */
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.learn-more:hover {
+    background-color: #e0a800; /* Darken button on hover */
+}
+
+/* Modal styling */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.7); /* Semi-transparent background */
+}
+
+/* Modal content box */
+.modal-content {
+    background-color: #ffffff;
+    margin: 15% auto; /* Centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: left;
+}
+
+/* Close button styling */
+.modal .close {
+    color: white;
+    font-size: 50px;
+    font-family: sans-serif;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.modal .close:hover {
+    color: #900c3f;
+}
+
+/* Footer Styles */
+footer {
+    position: relative; /* Place footer properly within the flow */
+    bottom: 0; /* Fix it at the bottom */
+    background: #900c3f;
+    color: white;
+    text-align: center;
+    font-size: 0.80rem;
+    padding: 10px 0;
+    margin-top: 20px;
+    border-top: 5px solid #ffc107;
+}
+
+footer p {
+    margin: 0;
+}

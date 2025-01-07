@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Quiz: Jose Rizal</title>
+    <link rel="icon" href="/images/logo.png" type="image/png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/logo.png">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="quiz.css">
+</head>
+<body>
+    <div class="banner quiz-banner"></div>
+        <div class="navbar">
+            <a href="home.html">
+                <img src="images/logo.png" class="logo" alt="logo">
+            </a>
+                  <ul>
+                      <li><a href="home.html">Home</a></li>
+                      <li><a href="buhay-akda.html">Buhay at Akda</a></li>
+                      <li><a href="hamon-kabataan.html">Hamon ng Kabataan</a></li>
+                      <li><a href="infographics.html">Infographics</a></li>
+                      <li><a href="quiz.html">Quiz</a></li>
+                      <li><a href="about.html">About</a></li>
+                  </ul>
+        </div>
+
+    <div class="quiz-container">
+        <div id="question" class="quiz-question">
+                <!-- Dynamic Question Will Load Here -->
+        </div>
+        <div id="options" class="quiz-options">
+                <!-- Answer Options Will Load Here -->
+        </div>
+        <button id="next-btn" disabled>Next</button>
+    </div>
+
+    <div class="quiz-result fade-in" id="quizResult">
+        <h2>Quiz Completed!</h2>
+        <p id="finalScore"></p>
+        <button onclick="retryQuiz()">Try Again</button>
+    </div>
+
+    <script src="scripts/quiz.js"></script>
+</body>
+</html>

@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Infographics</title>
+    <link rel="icon" href="/images/logo.png" type="image/png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/logo.png">
+    <link rel="stylesheet" href="infographics.css">
+    <style>
+        .sticky {
+            position: fixed;
+            top: 0;
+            left: 50%;
+            width: 100%;
+            z-index: 1000;
+            transition: all 0.3s ease;
+            padding: 0 145px; /* Add horizontal padding to the navbar */
+            box-sizing: border-box; /* Make sure padding is included in the dimensions */
+            display: flex; /* Enable flexbox layout for the nav items */
+            align-items: center; /* Vertically center the menu items */
+        }
+        .scrolled {
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            color: #ffc107; /* Improve text visibility */
+            justify-content: space-evenly; /* Spread items evenly between the start and end */
+        <div class="scrolled">Some content here</div>
+        }
+
+        button {
+            padding: 10px 20px;
+            border: none;
+            background-color: #900c3f;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #ffc107;
+        }
+    </style>
+
+    <script>
+        window.addEventListener("scroll", function() {
+            const navbar = document.querySelector(".navbar");
+            navbar.classList.toggle("scrolled", window.scrollY > 0);
+        });
+    </script>
+
+</head>
+<body>
+
+<div class="banner">
+    <div class="content">
+        <h1>
+            <span>Infographics</span>
+        </h1>
+    </div>
+</div>
+    <div class="navbar sticky">
+        <a href="home.html">
+            <img src="images/logo.png" class="logo" alt="logo">
+        </a>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="buhay-akda.html">Buhay at Akda</a></li>
+            <li><a href="hamon-kabataan.html">Hamon ng Kabataan</a></li>
+            <li><a href="infographics.html">Infographics</a></li>
+            <li><a href="quiz.html">Quiz</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+    </div>
+
+<main>
+    <section id="infographics-slider">
+        <h2>Infographics Slider</h2>
+        <div class="slider">
+            <div class="slide active">
+                <img src="images/buhay-akda-rizal.jpg" alt="Buhay at Akda ni Rizal">
+                <p>Buhay at Akda ni Rizal (Life and Works of Rizal)</p>
+            </div>
+            <div class="slide active">
+                <img src="images/aral-ni-rizal.jpg" alt="Mga Aral ni Rizal">
+                <p>Mga Aral ni Rizal (Teachings of Rizal)</p>
+            </div>
+            <div class="slide active">
+                <img src="images/kabataan-kasalukuyan.jpg" alt="Kabataan sa Kasalukuyan">
+                <p>Kabataan sa Kasalukuyan (Youth Today)</p>
+            </div>
+            <div class="slide active">
+                <img src="images/kahalagahan-wika.jpg" alt="Kahalagahan ng Wika">
+                <p>Kahalagahan ng Wika (Importance of Language)</p>
+            </div>
+        </div>
+        <br>
+        <button id="moreBtn">Show More</button>
+        <p><br><em>Click <strong>"Show More"</strong> for more infographics content that are <br>simple, concise, and based on statistics.</em></p>
+
+        <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+        <button class="next" onclick="changeSlide(1)">&#10095;</button>
+    </section>
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <button class="close" aria-label="Close">&times;</button>
+            <div class="nested-content">
+                <div class="custom-content-wrapper" style="all: initial; display: block;">
+                    <style>
+                         .custom-content-wrapper * { all: revert; }
+                         .custom-content { max-width: 1200px; margin: 0 auto; font-family: 'Merriweather', serif; color: #392F5A; background: rgba(255,255,255,0.95); padding: 2rem; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+                         .custom-content h1 { font-size: 3rem; color: #FF9F1C; text-align: center; margin-bottom: 2rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.1); }
+                         .custom-content .timeline { position: relative; max-width: 700px; margin: 0 auto; }
+                         .custom-content .timeline::after { content: ''; position: absolute; width: 6px; background-color: #FF4040; top: 0; bottom: 0; left: 50%; margin-left: -3px; z-index: 0; }
+                         .custom-content .timeline-item { padding: 10px 40px; position: relative; width: 50%; }
+                         .custom-content .timeline-item::after { content: ''; position: absolute; width: 25px; height: 25px; right: -17px; background-color: #FED766; border: 4px solid #FF9F1C; top: 15px; border-radius: 50%; z-index: 1; }
+                         .custom-content .timeline-item:nth-child(even) { left: 50%; }
+                         .custom-content .timeline-item:nth-child(odd) { left: 0; }
+                         .custom-content .timeline-content { padding: 20px 30px; background: white; position: relative; border-radius: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); z-index: 1; }
+                         .custom-content .timeline-date { font-weight: bold; color: #FF4040; }
+                         .custom-content .timeline-title { font-size: 1.25rem; color: #392F5A; margin: 10px 0; }
+                         .custom-content .major-works { background: linear-gradient(135deg, #FF9F1C 0%, #FED766 100%); padding: 2rem; border-radius: 8px; margin: 2rem 0; position: relative; z-index: 1; }
+                         .custom-content .major-works h2 { color: white; text-align: center; }
+                         .custom-content .work-card { background: white; padding: 1.5rem; border-radius: 6px; margin: 1rem 0; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+                         .custom-content .work-title { color: #FF4040; font-size: 1.2rem; margin-bottom: 0.5rem; }
+                         .background-image { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; opacity: 0.2; object-fit: cover; }
+                    </style>
+                    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+                    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+                    <div class="custom-content">
+                        <img class="background-image" src="https://austria-forum.org/attach/Geography/Asia/Philippines/Pictures/Manila/Rizal_Monument_Rizal_Park/B_124_Rizal_Monument_Rizal_Park_Rizal_Monument_Rizal_Park.jpg" alt="">
+                        <h1><i class="fas fa-star"></i> Buhay at Akda ni Rizal</h1>
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-content">
+                                    <div class="timeline-date">June 19, 1861</div>
+                                    <h3 class="timeline-title"><i class="fas fa-baby"></i> Birth</h3>
+                                    <p>Born in Calamba, Laguna as the seventh of eleven children</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-content">
+                                    <div class="timeline-date">1882-1887</div>
+                                    <h3 class="timeline-title"><i class="fas fa-university"></i> Education Abroad</h3>
+                                    <p>Studied medicine in Madrid, Paris and Heidelberg</p>
+                                </div>
+                            </div>
+                            <div class="major-works">
+                                <h2><i class="fas fa-book"></i> Major Works</h2>
+                                <div class="work-card">
+                                    <h3 class="work-title">Noli Me Tangere (1887)</h3>
+                                    <p>A social commentary exposing the ills of Spanish colonial rule</p>
+                                </div>
+                                <div class="work-card">
+                                    <h3 class="work-title">El Filibusterismo (1891)</h3>
+                                    <p>The sequel focusing on social and political issues</p>
+                                </div>
+                                <div class="work-card">
+                                    <h3 class="work-title">Sa Aking Mga Kabata</h3>
+                                    <p>Early poem about love for native language</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-content">
+                                    <div class="timeline-date">1892</div>
+                                    <h3 class="timeline-title"><i class="fas fa-users"></i> La Liga Filipina</h3>
+                                    <p>Founded civic organization promoting reforms</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-content">
+                                    <div class="timeline-date">December 30, 1896</div>
+                                    <h3 class="timeline-title"> <i class="fas fa-cross"></i> Martyrdom</h3>
+                                    <p>Executed in Bagumbayan (now Rizal Park)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="custom-content-wrapper2" style="all: initial; display: block;">
+                <style>
+                     .custom-content-wrapper2 * { all: revert; }
+                     .custom-content2 { font-family: 'Merriweather', serif; max-width: 1200px; margin: 0 auto; padding: 40px; background: url('https://aicreate.com/wp-admin/admin-ajax.php?action=image_proxy&url=https://austria-forum.org/attach/Geography/Asia/Philippines/Pictures/Manila/Rizal_Monument_Rizal_Park/B_124_Rizal_Monument_Rizal_Park_Rizal_Monument_Rizal_Park.jpg') center/cover; position: relative; }
+                     .custom-content2::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(45deg, rgba(11,19,43,0.95), rgba(255,22,84,0.85)); z-index: 1; }
+                     .content-inner2 { position: relative; z-index: 2; color: #fff; }
+                     .title { font-size: 48px; text-align: center; color: #FFD700; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); margin-bottom: 40px; }
+                     .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; }
+                     .card { background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); border-radius: 15px; padding: 25px; border: 1px solid rgba(255,255,255,0.2); transition: transform 0.3s; }
+                     .card:hover { transform: translateY(-5px); }
+                     .card h3 { color: #FFD700; font-size: 24px; margin-bottom: 15px; display: flex; align-items: center; gap: 10px; }
+                     .card i { color: #3F88C5; font-size: 24px; }
+                     .card p { font-size: 16px; line-height: 1.6; color: #fff; }
+                     .highlight { color: #FFD700; font-weight: bold; }
+                     .quote { font-style: italic; border-left: 3px solid #FF1654; padding-left: 15px; margin: 20px 0; }
+                </style>
+                <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+                <div class="custom-content2">
+                    <div class="content-inner2">
+                        <h1 class="title">Mga Aral ni Rizal</h1>
+                        <div class="grid">
+                            <div class="card">
+                                <h3><i class="fas fa-book"></i>Kahalagahan ng Edukasyon</h3>
+                                <p class="quote">"Ang kabataan ang pag-asa ng bayan"</p>
+                                <p>Binigyang-diin ni Rizal ang kahalagahan ng edukasyon bilang susi sa kaunlaran ng bayan at ng kabataan.</p>
+                            </div>
+                            <div class="card">
+                                <h3><i class="fas fa-flag"></i>Pagmamahal sa Wika at Bayan</h3>
+                                <p class="quote">"Ang hindi magmahal sa sariling wika, daig pa ang hayop at malansang isda"</p>
+                                <p>Itinuturo ni Rizal ang kahalagahan ng pagmamahal sa sariling wika at pagkakakilanlan.</p>
+                            </div>
+                            <div class="card">
+                                <h3><i class="fas fa-dove"></i>Mapayapang Pagbabago</h3>
+                                <p>Naniniwala si Rizal sa mapayapang paraan ng pagbabago at kaliwanagan ng isip para sa ikauunlad ng lipunan.</p>
+                            </div>
+                            <div class="card">
+                                <h3><i class="fas fa-sun"></i>Pag-asa at Liwanag</h3>
+                                <p>Tulad ng araw na sumisikat, simbolo ng pag-asa at bagong simula ang mga aral ni Rizal para sa ating bayan.</p>
+                            </div>
+                            <div class="card">
+                                <h3><i class="fas fa-users"></i>Pagkakaisa</h3>
+                                <p>Itinuturo ni Rizal ang kahalagahan ng pagkakaisa at pagtutulungan para sa ikabubuti ng bayan.</p>
+                            </div>
+                            <div class="card">
+                                <h3><i class="fas fa-lightbulb"></i>Kaliwanagan</h3>
+                                <p>Ang edukasyon at kaliwanagan ang daan tungo sa tunay na kalayaan at pag-unlad.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+
+                <div class="custom-content-wrapper3" style="all: initial; display: block;">
+                    <style>
+                        .custom-content-wrapper3 * { all: revert; }
+                        .custom-content3 { font-family: 'Roboto', sans-serif; max-width: 1200px; margin: 0 auto; padding: 2rem; background: linear-gradient(rgba(0,16,33,0.9), rgba(0,16,33,0.9)), url('https://aicreate.com/wp-admin/admin-ajax.php?action=image_proxy&url=https://austria-forum.org/attach/Geography/Asia/Philippines/Pictures/Manila/Rizal_Monument_Rizal_Park/B_124_Rizal_Monument_Rizal_Park_Rizal_Monument_Rizal_Park.jpg'); background-size: cover; color: #fff; }
+                        .header { text-align: center; padding: 2rem 0; }
+                        .title2 { font-size: 3rem; color: #FF165D; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); margin-bottom: 1rem; }
+                        .subtitle { font-size: 1.5rem; color: #FFD700; }
+                        .grid2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin: 2rem 0; }
+                        .card2 { background: rgba(0,16,33,0.8); border: 2px solid #3ED598; border-radius: 10px; padding: 1.5rem; transition: transform 0.3s; }
+                        .card2:hover { transform: translateY(-5px); }
+                        .card2-header { color: #FF165D; font-size: 1.5rem; margin-bottom: 1rem; }
+                        .card2-subheader { color: #FFD700; font-size: 1.2rem; margin-bottom: 0.5rem; }
+                        .card2-body { color: #fff; line-height: 1.6; }
+                        .stats { display: flex; justify-content: space-around; margin: 2rem 0; }
+                        .stat-item { text-align: center; }
+                        .stat-number { font-size: 2.5rem; color: #3ED598; }
+                        .stat-label { color: #FFD700; }
+                        .highlight2 { background: linear-gradient(120deg, #FF165D20, #3ED59820); padding: 0.2rem 0.5rem; border-radius: 4px; }
+                        .footer { text-align: center; margin-top: 2rem; color: #FFD700; }
+                        @media (max-width: 768px) {
+                            .grid { grid-template-columns: 1fr; }
+                            .title { font-size: 2rem; }
+                        }
+                    </style>
+                    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+                    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+                    <div class="custom-content3">
+                        <header class="header">
+                            <h1 class="title2">Kabataan sa Kasalukuyan</h1>
+                            <p class="subtitle">Youth Today</p>
+                        </header>
+                        <div class="stats">
+                            <div class="stat-item">
+                                <div class="stat-number">99.27%</div>
+                                <div class="stat-label">Literacy Rate</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">4hrs</div>
+                                <div class="stat-label">Daily Social Media Use</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">60%</div>
+                                <div class="stat-label">Political Engagement</div>
+                            </div>
+                        </div>
+                        <div class="grid2">
+                            <div class="card2">
+                                <i class="fas fa-graduation-cap fa-2x" style="color: #FF165D"></i>
+                                <h2 class="card2-header">Education Access</h2>
+                                <p class="card2-body">While the Philippines boasts a high literacy rate of <span class="highlight2">99.27%</span> as of 2021, challenges persist in ensuring equitable access to quality education across different regions and socio-economic groups.</p>
+                            </div>
+                            <div class="card2">
+                                <i class="fas fa-share-alt fa-2x" style="color: #FF165D"></i>
+                                <h2 class="card2-header">Social Media Influence</h2>
+                                <p class="card2-body">The Philippines is known as the "Social Media Capital of the World," with the average internet user spending almost <span class="highlight2">4 hours</span> per day on social media platforms.</p>
+                            </div>
+                            <div class="card2">
+                                <i class="fas fa-bullhorn fa-2x" style="color: #FF165D"></i>
+                                <h2 class="card2-header">Youth Activism</h2>
+                                <p class="card2-body"><span class="highlight2">60%</span> of Filipino youth like or share political posts, <span class="highlight2">54%</span> seek news on political issues, and <span class="highlight2">49%</span> discuss such issues either in person or online.</p>
+                            </div>
+                            <div class="card2">
+                                <i class="fas fa-book fa-2x" style="color: #FF165D"></i>
+                                <h2 class="card2-header">Rizal's Legacy</h2>
+                                <p class="card2-body">Dr. José Rizal emphasized education as a vital tool for empowerment and national progress. Current challenges highlight the need to reinforce his advocacy for accessible education.</p>
+                            </div>
+                        </div>
+                        <footer class="footer">
+                            <p>Based on 2021 Youth Survey Data</p>
+                        </footer>
+                    </div>
+                </div>
+
+                <div class="custom-content-wrapper4" style="all: initial; display: block;">
+                    <style>
+                        .custom-content-wrapper4 * { all: revert; }
+                        .custom-content4 { max-width: 1200px; margin: 0 auto; font-family: 'Roboto', sans-serif; color: #fff; position: relative; padding: 2rem; }
+                        .custom-content4::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-image: url('https://aicreate.com/wp-admin/admin-ajax.php?action=image_proxy&url=https://austria-forum.org/attach/Geography/Asia/Philippines/Pictures/Manila/Rizal_Monument_Rizal_Park/B_124_Rizal_Monument_Rizal_Park_Rizal_Monument_Rizal_Park.jpg'); background-size: cover; background-position: center; opacity: 0.15; z-index: -1; }
+                        .header2 { text-align: center; margin-bottom: 3rem; }
+                        .header2 h1 { font-size: 3.5rem; color: #FF1654; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); margin-bottom: 1rem; }
+                        .content-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+                        .card3 { background: #FF1654; padding: 2rem; border-radius: 10px; border: 1px solid #3F88C5; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+                        .card3 h2 { color: #FFD700; font-size: 1.8rem; margin-bottom: 1rem; }
+                        .card3 p { line-height: 1.6; font-size: 1.1rem; }
+                        .quote-card { grid-column: 1 / -1; background: rgba(11,19,43,0.9); text-align: center; padding: 3rem; }
+                        .quote-card p { font-size: 1.8rem; font-style: italic; color: white; text-shadow: 1px 1px 2px rgba(0,0,0,0.5); }
+                        .word-cloud {
+                            grid-column: 1 / -1;
+                            text-align: center;
+                            background: rgba(48, 117, 191, 0.9); /* Softer blue with slight transparency */
+                            padding: 2rem;
+                            border-radius: 10px; /* Adding slight rounding for modern look */
+                            color: #f0f8ff; /* Light contrasting color for text */
+                        }
+
+                        .word-cloud span {
+                            display: inline-block;
+                            margin: 0.5rem;
+                            font-size: 1.4rem;
+                            color: #2d3748; /* Muted dark gray for contrast */
+                            background: #eef4fa; /* Light background for individual words */
+                            padding: 0.3rem 0.6rem;
+                            border-radius: 5px;
+                            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+                            transition: background-color 0.3s, transform 0.2s; /* For hover effects */
+                        }
+                        .highlight3 { color: #FF1654; font-weight: bold; }
+                    </style>
+                    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+                    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+                    <div class="custom-content4">
+                        <div class="header2">
+                            <h1><i class="fas fa-language"></i> Kahalagahan ng Wika</h1>
+                        </div>
+                        <div class="content-grid">
+                            <div class="card3">
+                                <h2><i class="fas fa-flag"></i> Wika at Pambansang Identidad</h2>
+                                <p>Ang wika ay nagpapahayag ng ating kultura at tradisyon. Sa pamamagitan ng ating wika, naipapahayag ang ating mga saloobin, pananaw, at mga karanasan.</p>
+                            </div>
+                            <div class="card3">
+                                <h2><i class="fas fa-book"></i> Rizal at ang Sariling Wika</h2>
+                                <p>Si Jose Rizal ay nagtaguyod ng paggamit ng sariling wika bilang paraan ng pagpapakita ng pagmamahal sa bayan at pagpapanatili ng ating kultura.</p>
+                            </div>
+                            <div class="quote-card">
+                                <p><i class="fas fa-quote-left"></i> Ang hindi magmahal sa sariling wika ay higit pa sa hayop at malansang isda. <i class="fas fa-quote-right"></i><br>- Jose Rizal</p>
+                            </div>
+                            <div class="word-cloud">
+                                <span>KALAYAAN</span>
+                                <span>PAGKAKAISA</span>
+                                <span>KASARINLAN</span>
+                                <span>BAYANIHAN</span>
+                                <span>DANGAL</span>
+                                <span>PANININDIGAN</span>
+                            </div>
+                            <div class="card3">
+                                <h2><i class="fas fa-heart"></i> Kultura at Tradisyon</h2>
+                                <p>Ang wika ay susi sa pagsasalin ng ating mayamang kultura at tradisyon sa susunod na henerasyon.</p>
+                            </div>
+                            <div class="card3">
+                                <h2><i class="fas fa-globe"></i> Makabagong Panahon</h2>
+                                <p>Sa digital na era, ang Filipino ay patuloy na umuusbong bilang wika ng pagkakaisa at pagbabago.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="custom-content-wrapper5" style="all: initial; display: block;">
+                    <style>
+                        .custom-content-wrapper5 * {
+                            all: revert;
+                        }
+                        .custom-content5 {
+                            font-family: 'Roboto', sans-serif;
+                            max-width: 1200px;
+                            margin: 0 auto;
+                            padding: 40px;
+                            background: linear-gradient(rgba(13,59,102,0.95), rgba(13,59,102,0.95)), url('https://aicreate.com/wp-admin/admin-ajax.php?action=image_proxy&url=https://austria-forum.org/attach/Geography/Asia/Philippines/Pictures/Manila/Rizal_Monument_Rizal_Park/B_124_Rizal_Monument_Rizal_Park_Rizal_Monument_Rizal_Park.jpg');
+                            background-size: cover;
+                            color: #FAF0CA;
+                        }
+                        .header3 {
+                            text-align: center;
+                            margin-bottom: 60px;
+                        }
+                        .header3 h1 {
+                            font-size: 48px;
+                            color: #F4D35E;
+                            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+                            margin-bottom: 20px;
+                        }
+                        .stats-grid {
+                            display: grid;
+                            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                            gap: 30px;
+                            margin-bottom: 40px;
+                        }
+                        .stat-card {
+                            background: rgba(250,240,202,0.1);
+                            padding: 25px;
+                            border-radius: 10px;
+                            backdrop-filter: blur(5px);
+                            border: 1px solid rgba(238,150,75,0.3);
+                        }
+                        .stat-card h3 {
+                            color: #F4D35E;
+                            font-size: 24px;
+                            margin-bottom: 15px;
+                            display: flex;
+                            align-items: center;
+                            gap: 10px;
+                        }
+                        .stat-card i {
+                            color: #EE964B;
+                        }
+                        .stat-card p {
+                            line-height: 1.6;
+                            font-size: 16px;
+                        }
+                        .chart-section {
+                            background: rgba(250,240,202,0.05);
+                            padding: 30px;
+                            border-radius: 10px;
+                            margin: 40px 0;
+                        }
+                        .highlight4 {
+                            color: #EE964B;
+                            font-weight: bold;
+                        }
+                        .footer {
+                            text-align: center;
+                            margin-top: 40px;
+                            font-size: 14px;
+                            color: #FAF0CA;
+                            opacity: 0.8;
+                        }
+                    </style>
+                    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+                    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+                    <div class="custom-content5">
+                        <div class="header3">
+                            <h1>Data on Youth Activism and Education</h1>
+                        </div>
+                        <div class="stats-grid">
+                            <div class="stat-card">
+                                <h3><i class="fas fa-book"></i> Youth Literacy Rate</h3>
+                                <p>The youth literacy rate (ages 15-24) reached <span class="highlight4">99.77%</span> in 2022, up from 99% in 2020.</p>
+                            </div>
+                            <div class="stat-card">
+                                <h3><i class="fas fa-user-graduate"></i> Student Enrollment</h3>
+                                <p>High overall enrollment rates with disparities in higher education and marginalized communities.</p>
+                            </div>
+                            <div class="stat-card">
+                                <h3><i class="fas fa-comments"></i> Social Media Engagement</h3>
+                                <p><span class="highlight4">60%</span> like/share political posts, <span class="highlight4">27%</span> post their own insights.</p>
+                            </div>
+                        </div>
+                        <div class="chart-section">
+                            <h2><i class="fas fa-chart-line"></i> Modern Movements Inspired by Rizal</h2>
+                            <div class="stat-card">
+                                <h3><i class="fas fa-lightbulb"></i> Educational Reforms</h3>
+                                <p>Youth-led initiatives advocate for educational reforms, following Rizal's vision of education as foundation for national development.</p>
+                            </div>
+                            <div class="stat-card">
+                                <h3><i class="fas fa-bullhorn"></i> Digital Activism</h3>
+                                <p>Rising digital activism reflects Rizal's spirit of advocating for societal change through informed discourse.</p>
+                            </div>
+                        </div>
+                        <div class="footer">
+                            <p>Data sourced from the 2021 National Youth Survey and educational reports</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript included directly -->
+    <script>
+        let currentSlide = 0;
+
+        function changeSlide(direction) {
+            const slides = document.querySelectorAll('.slide');
+            const totalSlides = slides.length;
+
+            // Hide all slides
+            slides.forEach((slide) => {
+                slide.style.display = 'none'; // Hide all slides
+            });
+
+            // Update current slide index (looping through slides)
+            currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
+
+            // Show only the new current slide
+            slides[currentSlide].style.display = 'block';
+        }
+
+        // Initialize the carousel: Show only the first slide
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.slide').forEach((slide, index) => {
+                slide.style.display = index === 0 ? 'block' : 'none'; // Show the first slide only
+            });
+        });
+    </script>
+
+</main>
+<footer>
+    <p><i>All content on this website are for educational purposes only.<br>
+        All rights reserved to their respective owners.</i> &copy; 2025</p>
+</footer>
+
+<script src="scripts/modal.js"></script>
+</body>
+</html>

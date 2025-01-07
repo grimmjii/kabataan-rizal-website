@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Buhay at Akda</title>
+    <link rel="icon" href="/images/logo.png" type="image/png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/logo.png">
+    <link rel="stylesheet" href="buhay-akda.css">
+        <style>
+            .sticky {
+                position: fixed;
+                top: 0;
+                left: 50%;
+                width: 100%;
+                z-index: 1000;
+                transition: all 0.3s ease;
+                padding: 0 145px; /* Add horizontal padding to the navbar */
+                box-sizing: border-box; /* Make sure padding is included in the dimensions */
+                display: flex; /* Enable flexbox layout for the nav items */
+                align-items: center; /* Vertically center the menu items */
+            }
+            .scrolled {
+                background-color: rgba(0, 0, 0, 0.5);
+                padding: 10px;
+                color: #ffc107; /* Improve text visibility */
+                justify-content: space-between; /* Spread items evenly between the start and end */
+            }
+            .menu-item {
+                margin: 0 10px; /* Optional: Add spacing between menu items */
+            }
+            ul {
+                padding-left: 40px; /* Indent bullet points by 40px */
+                margin: 20px 0; /* Add vertical spacing for better readability */
+                list-style-position: outside; /* Position bullet points outside the text box */
+            }
+            ul.inside {
+                list-style-position: inside; /* Alternative: Bullets inside the text box */
+            }
+            li {
+                margin-bottom: 10px; /* Add 10px spacing between each bullet point */
+            }
+        </style>
+
+        <script>
+            window.addEventListener("scroll", function() {
+                const navbar = document.querySelector(".navbar");
+                navbar.classList.toggle("scrolled", window.scrollY > 0);
+            });
+        </script>
+</head>
+<body>
+        <div class="banner">
+            <div class="content">
+                <h1>
+                    <span>Buhay at Akda ni José Rizal</span>
+                </h1>
+            </div>
+        </div>
+        <nav class="navbar">
+            <a href="home.html">
+                <img src="images/logo.png" class="logo" alt="logo">
+            </a>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="buhay-akda.html">Buhay at Akda</a></li>
+                <li><a href="hamon-kabataan.html">Hamon ng Kabataan</a></li>
+                <li><a href="infographics.html">Infographics</a></li>
+                <li><a href="quiz.html">Quiz</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+<main>
+    <section id="life">
+        <h2>Maikling Talambuhay ni José Rizal</h2>
+        <p>
+            Si <strong>Dr. José Protacio Rizal Mercado y Alonzo Realonda</strong> ay ang pambansang bayani ng Pilipinas.
+            <br>
+            Siya ay ipinanganak noong <strong>Hunyo 19, 1861</strong>, sa <strong>Calamba, Laguna</strong>. Siya ang ika-pito
+            sa labing-isang anak nina <strong>Francisco Mercado Rizal</strong> at <strong>Teodora Alonzo</strong>.
+        </p>
+        <br>
+        <h4>Kabataan</h4>
+        <p>
+            Bata pa lamang ay ipinakita na niya ang katalinuhan. Sa edad na tatlo, marunong na siyang bumasa,
+            at sa edad na walo, naisulat niya ang kanyang unang tula, <i>Sa Aking Mga Kabata</i>.<br>
+            Lumaki siyang may malasakit sa bayan dahil sa mga kwento ng kanyang ina tungkol sa kasaysayan
+            at pagdurusa ng mga Pilipino sa ilalim ng mga Espanyol.
+        </p>
+        <br>
+        <h4>Edukasyon</h4>
+            <ul>
+                <li><strong>Ateneo Municipal de Manila</strong> - Nagtapos bilang Batsilyer ng Sining.</li>
+                <li><strong>Unibersidad ng Santo Tomas</strong> -Nag-aral ng medisina ngunit lumipat sa ibang bansa dahil sa diskriminasyon.</li>
+                <li>
+                    <strong>Universidad Central de Madrid</strong> -Nagtapos ng Medisina at Filosopiya.
+                    <br> Nagpatuloy ng pag-aaral sa Alemanya, Pransya, at Belgium, kung saan natutunan niya ang iba't ibang wika
+                    at naging bihasa sa higit <strong>22 wika</strong>.
+                </li>
+            </ul>
+        <h4>Karera</h4>
+        <p>
+            Isang <strong>manggagamot</strong>, <strong>manunulat</strong>, <strong>makata</strong>, <strong>pintor</strong>, <strong>iskultor</strong>,
+            <strong>arkitekto</strong>, at <strong>dalubwika</strong>.<br>
+            Siya rin ay isang <strong>reformista</strong>, hindi isang rebolusyonaryo. Ginusto niyang baguhin ang sistema sa mapayapang paraan.
+        </p>
+    </section>
+
+    <section id="works">
+        <h2>Mga Akda ni José Rizal</h2>
+        <div class="works-container">
+            <!-- Work 1 -->
+            <div class="work-item">
+                <img src="images/noli_me_tangere.jpg" alt="Noli Me Tangere"
+                width="300" height="412" class="work-img">
+                <h2>Noli Me Tangere (Huwag Mo Akong Salingin)</h2>
+                <p>Isang nobelang sumasalamin sa lipunang Pilipino sa ilalim ng kolonyalismo.</p>
+                <p><br><strong>Petsa ng Pagkakalathala:</strong> 1887</p>
+
+                <h3>Tema:</h3>
+                <p>Inilantad ni Rizal ang mga pang-aabuso at katiwalian sa ilalim ng pamahalaang kolonyal at simbahan.</p>
+
+                <h3>Buod:</h3>
+                <p>
+                    Sinusundan ng nobela ang buhay ni <strong>Crisostomo Ibarra</strong>, isang edukadong Pilipino na bumalik mula sa Europa upang magtatag ng paaralan.
+                    Sa kabila ng kanyang mapayapang layunin, nasadlak siya sa mga intriga at katiwalian na umabot sa trahedya.
+                </p>
+
+                <h3>Pangunahing Tauhan:</h3>
+                <ul>
+                    <li><strong>Crisostomo Ibarra</strong>: Ang pangunahing karakter na naniniwala sa edukasyon bilang susi sa pagbabago.</li>
+                    <li><strong>Maria Clara</strong>: Ang kanyang kasintahan, simbolo ng puri at dignidad ng mga Pilipina.</li>
+                </ul>
+                <h3>Epekto:</h3>
+                <p>
+                    Ang <i>Noli Me Tangere</i> ay nagbigay inspirasyon sa mga Pilipino upang buksan ang kanilang mata sa mga abuso
+                    ng kolonyal na pamamahala.
+                </p>
+                <a href="#" class="learn-more" onclick="showModal('noli-modal')">Learn More</a>
+            </div>
+
+            <!-- The Modal -->
+            <div id="noli-modal" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('noli-modal')">&times;</span>
+                    <h2>Noli Me Tangere</h2>
+                    <!-- Introduction Section -->
+                    <p><strong>Ang "Noli Me Tangere"</strong> (na ang ibig sabihin ay "Huwag Mo Akong Salingin") ay isang
+                        nobelang isinulat ni José Rizal na unang inilathala noong 1887. Ang akdang ito ay isang matinding
+                        kritika sa mga hindi pagkakapantay-pantay at mga isyung panlipunan sa Pilipinas sa ilalim ng
+                        kolonyalismong Espanyol. Ang kwento ay nagpapakita ng mga kahirapan at kalupitan na nararanasan ng
+                        mga Pilipino sa mga kamay ng mga Kastila at ang kanilang mga katulong sa simbahan at pamahalaan.
+                    </p>
+                    <br>
+
+                    <!-- Panimula Section -->
+                    <h3>Panimula</h3>
+                    <p>
+                        Si <strong>Crisostomo Ibarra</strong> ay isang binatang Pilipino na nag-aral sa Europa ng ilang taon. Pagbalik niya
+                        sa Pilipinas, nagnanais siyang magtayo ng paaralan upang mapaunlad ang edukasyon ng mga kabataan. Sa
+                        kanyang pagbabalik, natutunan niya ang mga hindi magagandang balita tungkol sa kanyang pamilya, lalo
+                        na ang tungkol sa kanyang ama, si <strong>Don Rafael Ibarra</strong>, na isang mabuting tao ngunit namatay dahil sa
+                        maling akusasyon ng pagiging erehe. Si Ibarra ay nagdesisyon na ipagpatuloy ang mga plano ng kanyang ama
+                        upang makatulong sa bayan.
+                    </p>
+                    <br>
+
+                    <!-- Recognition of Characters Section -->
+                    <h3>Pagkilala sa mga Tauhan</h3>
+                    <p>
+                        Si <strong>Ibarra</strong> ay umiibig kay <strong>Maria Clara</strong>, isang dalagang maganda at tapat, na anak ni
+                        <strong>Padre Damaso</strong>, isang paring Kastila. Subalit, hindi alam ni Ibarra na siya ay anak ni Padre Damaso.
+                        Sa kabila ng kanilang pagmamahalan, maraming pagsubok ang dumating sa kanilang relasyon dahil sa
+                        impluwensya ng simbahan at pamahalaan.
+                    </p>
+                    <br>
+                    <p>
+                        Kasama ni Ibarra si <strong>Elias</strong>, isang misteryosong lalaki na may malalim na hangarin. Si Elias ay may mga
+                        paniniwala at layunin na labanan ang hindi makatarungalan ng pamahalaan at ng simbahan. Siya ay
+                        naglingkod bilang gabay ni Ibarra at nagtangkang tulungan siya sa mga pagsubok na kinaharap niya.
+                    </p>
+                    <br>
+
+                    <!-- Key Events Section -->
+                    <h3>Mga Pangunahing Kaganapan</h3>
+                    <p>
+                        Ang nobela ay puno ng mga pag-iisa at mga salungatan sa pagitan ng mga tauhan. Pinakita dito ang mga
+                        kalupitan at pagmamalabis ng mga Kastilang prayle, tulad ni <strong>Padre Damaso</strong>, na gumamit ng kapangyarihan
+                        upang maghasik ng takot at pang-aabuso sa mga tao. Isa sa pinakamalupit na eksena ay nang si Ibarra ay
+                        akusahan ng pagiging erehe dahil sa mga plano niyang magtatag ng paaralan at maglingkod sa bayan.
+                    </p>
+                    <br>
+                    <p>
+                        Sa isang tagpo sa simbahan, nalamang ni Maria Clara ang tunay na pagkatao ng kanyang ama, si Padre
+                        Damaso, na hindi tunay na ama ni Ibarra, kundi isang malupit na pari na gumugol ng maraming taon sa
+                        pagkontrol sa buhay ni Maria Clara. Sa kabila ng mga pagsubok, nagpatuloy si Ibarra sa kanyang mga
+                        layunin, na humantong sa isang labanan sa pagitan ng mga nagnanais ng pagbabago at ng mga hindi nais
+                        magbago sa lipunan.
+                    </p>
+                    <br>
+
+                    <!-- Conclusion Section -->
+                    <h3>Pagtatapos</h3>
+                    <p>
+                        Sa kabila ng lahat ng mga pagsubok at sakripisyo, napagtanto ni Ibarra na hindi siya maaaring magtagumpay
+                        nang mag-isa. Dahil sa mga kasalungat niyang naglalaban, nagpasya siyang magtago at magbalik sa Europa
+                        upang magpatuloy ng mas maayos na buhay. Naghiwalay sina Maria Clara at Ibarra, at sa kabila ng lahat
+                        ng paghihirap at sakripisyo, hindi natamo ni Ibarra ang kanyang layunin.
+                    </p>
+                    <br>
+
+                    <!-- Closing Section -->
+                    <h3>Pangwakas</h3>
+                    <p>
+                        Ang <strong>Noli Me Tangere</strong> ay isang nobelang nagpapakita ng kalupitan ng panahon ng kolonyalismo at ang mga
+                        kamalian ng mga naghahari. Binuksan nito ang mga mata ng mga Pilipino sa mga problema ng kanilang
+                        lipunan, at nagbigay inspirasyon upang magkaisa at magtulungan upang makamit ang pagbabago.
+                    </p>
+                    <br>
+                    <p>
+                        Sa kabuuan, ang <strong>Noli Me Tangere</strong> ay isang matinding kritika ni José Rizal laban sa mga hindi makatarungang
+                        sistema ng simbahan at pamahalaan. Ipinakita niya ang mga pagmamalabis ng mga Kastilang awtoridad
+                        at ng mga may kapangyarihan, pati na rin ang mga pangarap ng mga Pilipino na magkaroon ng katarungan,
+                        edukasyon, at kalayaan.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Work 2 -->
+            <div class="work-item">
+                <img src="images/el_filibusterismo.jpg" alt="El Filibusterismo">
+                <h2>El Filibusterismo (Ang Paghahari ng Kasakiman)</h2>
+                <p>Ang karugtong ng Noli Me Tangere na tumutuligsa sa kawalang-katarungan.</p>
+                <p><br><strong>Petsa ng Pagkakalathala:</strong> 1891</p>
+
+                <h3>Tema:</h3>
+                <p>Tumatalakay sa rebolusyon at desperasyon ng mga Pilipino para sa kalayaan.</p>
+
+                <h3>Buod:</h3>
+                <p>
+                    Nagbalik si <strong>Crisostomo Ibarra</strong> bilang <strong>Simoun</strong>, isang mayamang alahero na nais maghiganti.
+                    Sa pamamagitan ng rebolusyon, hinangad niyang ibagsak ang mapang-aping sistema.
+                </p>
+
+                <h3>Pangunahing Tauhan:</h3>
+                <ul>
+                    <li><strong>Simoun</strong>: Simbolo ng galit at pagkadismaya ni Rizal sa kawalan ng pagbabago.</li>
+                    <li><strong>Basilio</strong>: Nagpapakita ng pagpili sa mapayapang paraan ng pagbabago.</li>
+                </ul>
+
+                <h3>Epekto:</h3>
+                <p>
+                    Ang nobela ay nagbigay ng mas madilim na pananaw sa rebolusyonaryong landas ngunit nananatiling mahalagang aral
+                    tungkol sa tamang paraan ng pagbabago.
+                </p>
+                <a href="#" class="learn-more" onclick="showModal('el-fili-modal')">Learn More</a>
+            </div>
+
+            <!-- El Filibusterismo Modal -->
+            <div id="el-fili-modal" class="modal">
+                <div class="modal-content">
+                    <!-- Close Button -->
+                    <span class="close" onclick="closeModal('el-fili-modal')">&times;</span>
+
+                    <!-- Title -->
+                    <h2>El Filibusterismo</h2>
+
+                    <!-- Introduction Section -->
+                    <p><strong>Ang El Filibusterismo</strong> ay isinulat ni José Rizal at inilathala noong 1891, limang taon
+                        matapos ang <em>Noli Me Tangere</em>. Ang nobelang ito ay mas madilim at mas seryoso kaysa sa unang akda. Layunin
+                        nitong itaguyod ang mga ideya ni Rizal hinggil sa reporma at pagbabago sa lipunan, ngunit mula sa mas
+                        matinding pananaw. Ang <em>El Filibusterismo</em> ay naglalaman ng mga tema ng paghihimagsik, kalupitan, at ang
+                        kakulangan ng katarungan sa ilalim ng pamahalaang Kastila.
+                    </p>
+                    <br>
+
+                    <!-- Characters Section -->
+                    <h3>Pangunahing Tauhan</h3>
+                    <p>
+                        Ang kwento ng <em>El Filibusterismo</em> ay umiikot sa pangunahing tauhang si <strong>Simoun</strong>, isang
+                        mayamang alahero na may lihim na layunin: ang maghiganti laban sa mga Kastilang mananakop at ang mga
+                        Pilipinong kasabwat nila. Siya ay si <strong>Crisostomo Ibarra</strong> na nagbalik mula sa Europa, ngunit siya
+                        ngayon ay nag-aalab sa galit at naghahangad ng rebolusyon upang makamit ang katarungan para sa kanyang
+                        bayan.
+                    </p>
+                    <br>
+                    <p>
+                        Ang kanyang mga kasama ay naglalarawan ng iba't ibang aspeto ng lipunan:
+                    </p>
+                    <ul>
+                        <li><strong>Basilio</strong> - Anak ni Sisa, isang mag-aaral ng medisina na lumalaban sa pamahalaan at simbahan
+                            para sa katarungan.
+                        </li>
+                        <li><strong>Crispin</strong> - Nakababatang kapatid ni Basilio na naging simbolo ng mga naapi.</li>
+                        <li><strong>Isagani</strong> - Isang kabataang idealista na may mga pangarap para sa mas makatarungan at
+                            maayos na lipunan, na kaibigan ni Basilio.
+                        </li>
+                        <li><strong>Padre Florentino</strong> - Isang matandang pari na naglalaman ng malalim na mga kaisipan
+                            ni Rizal tungkol sa kalayaan, katarungan, at relihiyon.
+                        </li>
+                    </ul>
+                    <p>
+                        Ang iba pang mga karakter, tulad nina <strong>Kapitan Tiago</strong>, <strong>Doña Victorina</strong>,
+                        <strong>Don Custodio</strong>, at <strong>Padre Damaso</strong>, ay kumakatawan sa iba’t ibang aspeto ng masalimuot
+                        na lipunan: mula sa mga may kapangyarihan hanggang sa mga biktima ng maling sistema ng kolonyalismo.
+                    </p>
+                    <br>
+
+                    <!-- Main Events Section -->
+                    <h3>Mga Pangunahing Kaganapan</h3>
+                    <p>
+                        Ang kwento ng <em>El Filibusterismo</em> ay puno ng mga intriga at mga lihim na plano. Si Simoun, ang pangunahing
+                        tauhan, ay naglunsad ng paghihimagsik sa pamamagitan ng pag-aalok ng mga armas at pagpaplano ng mga lihim
+                        na operasyon upang mag-udyok ng pagbabagsak sa pamahalaan.
+                    </p>
+                    <br>
+                    <p>
+                        Sa kanyang matinding galit, nais niyang maghiganti hindi lamang laban sa mga Kastila kundi pati sa sistema ng
+                        simbahan at pamahalaan. Isang mahalagang eksena sa nobela ay ang plano niyang pasabugin ang kasal nina
+                        <strong>Paulita Gomez</strong> at <strong>Juanito Pelaez</strong> bilang simbolo ng kanyang rebolusyon. Ngunit
+                        sa huli, ang mga hindi inaasahang pangyayari ay nagpabago sa kanyang mga layunin.
+                    </p>
+                    <br>
+                    <p>
+                        Sa iba pang bahagi ng nobela, si Basilio ay ipinakita bilang biktima ng sistemang puno ng
+                        kawalang-katarungan, habang si Isagani ay patuloy na nakaharap sa mga balakid sa kanyang adhikain.
+                    </p>
+                    <br>
+
+                    <!-- Crisis and Resolution Section -->
+                    <h3>Krisis at Pagtatapos</h3>
+                    <p>
+                        Ang kulminasyon ng kwento ay nang pinlano ni Simoun na pasabugin ang kasal nina <strong>Paulita Gomez</strong>
+                        at <strong>Juanito Pelaez</strong> bilang bahagi ng kanyang paghihiganti. Ngunit nagkaroon ng mga di inaasahang
+                        pagkakataon na naging sanhi upang mabigo ang kanyang plano at magtapos sa kanyang pagkatalo.
+                    </p>
+                    <br>
+                    <p>
+                        Sa wakas, si Simoun ay naging simbolo ng kabiguan ng rebolusyon na hindi pa handa sa panahong iyon. Ang
+                        kanyang buhay ay natapos sa harap ni <strong>Padre Florentino</strong>, na nagsalaysay ng mga ideya ni Rizal
+                        tungkol sa pangangailangan ng mapayapang pagbabago at ang papel ng edukasyon sa pagbuo ng mas makatarungan
+                        at maayos na lipunan.
+                    </p>
+                    <br>
+
+                    <!-- Closing Section -->
+                    <h3>Pangwakas</h3>
+                    <p>
+                        Ang <em>El Filibusterismo</em> ay isang mas matinding kritika ni José Rizal laban sa pamahalaan at simbahan. Ngunit
+                        higit pa rito, ito ay pagsusuri din sa mga Pilipino mismo—ang kanilang kakulangan ng pagkakaisa at
+                        determinasyon upang makamit ang kalayaan. Ang nobela ay nagpapakita na ang tunay na pagbabago ay
+                        nangangailangan ng sakripisyo, pagkakaisa, at edukasyon.
+                    </p>
+                    <br>
+                    <p>
+                        Sa kabila ng trahedya ng nobela, ito ay nagbibigay inspirasyon sa bawat Pilipino na magsikap para sa mas
+                        magandang kinabukasan. Ang mga tema ng rebolusyon, pagkakaisa, at katarungan ay nananatiling mahalaga sa
+                        ating lipunan hanggang ngayon.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Work 3 -->
+            <div class="work-item">
+                <img src="images/a-la-juventud-filipina.jpg" alt="A La Juventud Filipina">
+                <h2>A la Juventud Filipina (Sa Kabataang Pilipino)</h2>
+                <p>Isang tula na nagpaparangal sa kabataang Pilipino at ang kanilang papel para sa bayan.</p>
+                <p><br><strong>Petsa ng Pagkakalathala:</strong> 1879</p>
+
+                <h3>Tema:</h3>
+                <p>
+                    Ang <i>A la Juventud Filipina</i> ay isang inspirasyonal na pahayag ni Rizal sa kabataan upang kilalanin ang kanilang
+                    halaga at gampanan ang kanilang tungkulin bilang tagapagtaguyod ng liwanag, katarungan, at pagbabago para sa bayan.
+                </p>
+                <p>
+                    Sa tula, ipinahayag niya ang kanyang tiwala sa kakayahan ng kabataan bilang susi sa magandang kinabukasan ng Pilipinas.
+                </p>
+
+                <h3>Epekto:</h3>
+                <p>
+                    Nagsisilbing inspirasyon ito sa mga kabataan na gamitin ang kanilang talino at kakayahan upang makapaglingkod sa bayan.
+                </p>
+                <a href="#" class="learn-more" onclick="showModal('a-la-juventud-modal')">Learn More</a>
+            </div>
+
+            <!-- A La Juventud Filipina Modal -->
+            <div id="a-la-juventud-modal" class="modal">
+                <div class="modal-content">
+                    <!-- Close Button -->
+                    <span class="close" onclick="closeModal('a-la-juventud-modal')">&times;</span>
+
+                    <!-- Title -->
+                    <h2>A la Juventud Filipina</h2>
+
+                    <!-- Introduction Section -->
+                    <p>
+                        <strong><em>A la Juventud Filipina</em></strong> (<em>To the Filipino Youth</em>) ay isang tanyag na tula na isinulat ni Dr.
+                        José Rizal noong siya’y kabataan. Inilaan ni Rizal ang tulang ito sa kabataang Pilipino bilang pagkilala
+                        sa kanilang talino, tapang, at kakayahan upang buhatin ang bansa tungo sa mas maliwanag na kinabukasan.
+                        Ang orihinal na tula ay isinulat sa wikang Espanyol, ngunit narito rin ang salin nito sa Tagalog.
+                    </p>
+                    <br>
+
+                    <!-- Original Spanish Version Section -->
+                    <h3>Ang Orihinal sa Wikang Espanyol:</h3>
+                    <pre>
+Alza su tersa frente,
+Juventud Filipina, en este día!
+Luce resplandeciente
+Tu rica gallardía,
+Bella esperanza de la Patria Mía!
+
+Vuela, genio grandioso,
+Y les infunde noble pensamiento,
+Que lance vigoroso,
+Más rápido que el viento,
+Su mente virgen al glorioso asiento.
+
+Baja con la luz grata
+De las artes y ciencias a la arena,
+Juventud, y desata
+La pesada cadena
+Que tu genio poético encadena.
+
+Ve que en la ardiente zona
+Do moraron las sombras, el hispano
+Esplendente corona,
+Con pía sabia mano,
+Ofrece al hijo de este suelo indiano.
+
+Tú, que buscando subes,
+En alas de tu rica fantasia,
+Del Olimpo en las nubes
+Tiernisima poesia
+Mas sabrosa que nectar y ambrosia.
+
+Tú, de celeste acento,
+Melodioso rival Filomena,
+Que en variado concierto
+En la noche serena
+Disipas del mortal la amarga pena.
+
+Tú que la pena dura
+Animas al impulso de tu mente,
+Y la memoria pura
+Del genio refulgente
+Eternizas con genio prepotente.
+
+Y tú, que el vario encanto
+De Febo, amado del divino Apeles,
+Y de natura el manto
+Con mágicos pinceles
+Trasladar al sencillo lienzo sueles.
+
+Corred! que sacra llama
+Del genio el lauro coronar espera,
+Esparciendo la Fama
+Con trompa pregonera
+El nombre del mortal por la ancha espera.
+
+Día, día felice,
+Filipinas gentil, para tu suelo!
+Al Potente bendice
+Que con amante anhelo
+La ventura te envía y el consuelo.
+        </pre>
+
+                    <!-- Tagalog Translation Section -->
+                    <h3>Salin sa Wikang Tagalog:</h3>
+                    <pre>
+Itaas ang iyong noong aliwalas
+ngayon, Kabataan ng aking pangarap!
+ang aking talino na tanging liwanag
+ay pagitawin mo, Pag-asa ng Bukas!
+
+Ikaw ay lumitaw, O Katalinuhan
+magitang na diwang puno sa isipan
+mga puso nami'y sa iyo'y naghihintay
+at dalhin mo roon sa kaitaasan.
+
+Bumaba kang taglay ang kagiliw-giliw
+na mga silahis ng agham at sining
+mga Kabataan, hayo na't lagutin
+ang gapos ng iyong diwa at damdamin.
+
+Masdan ang putong na lubhang makinang
+sa gitna ng dilim ay matitigan
+maalam na kamay, may dakilang alay
+sa nagdurusa mong bayang minamahal.
+
+Ikaw na may bagwis ng pakpak na nais
+kagyat na lumipad sa tuktok ng langit
+paghanapin mo ang malambing na tinig
+doon sa Olimpo'y pawang nagsisikap.
+
+Ikaw na ang himig ay lalong mairog
+Tulad ni Pilomel na sa luha'y gamot
+at mabisang lunas sa dusa't himuntok
+ng puso at diwang sakbibi ng lungkot.
+
+Ikaw, na ang diwa'y makapangyarihan
+matigas na bato'y mabibigyang-buhay
+mapagbabago mo alaalang taglay
+sa iyo'y nagiging walang kamatayan.
+
+Ikaw, na may diwang inibig ni Apeles
+sa wika inamo ni Pebong kay rikit
+sa isang kaputol na lonang maliit
+ginuhit ang ganda at kulay ng langit.
+
+Humayo ka ngayon, papagningasin mo
+ang alab ng iyong isip at talino
+maganda mong ngala'y ikalat sa mundo
+at ipagsigawan ang dangal ng tao.
+
+Araw na dakila ng ligaya't galak
+magsaya ka ngayon, mutyang Pilipinas
+purihin ang bayang sa iyo'y lumingap
+at siyang nag-akay sa mabuting palad.
+        </pre>
+
+                    <!-- Closing Section -->
+                    <h3>Pangwakas</h3>
+                    <p>
+                        Sa tulang ito, inilalarawan ni Rizal ang kabataang Pilipino bilang <em>"Pag-asa ng Bayan."</em> Hinikayat niya ang
+                        kabataan na gamitin ang kanilang talino, kaalaman, at kakayahan sa agham at sining upang maiahon ang
+                        Pilipinas mula sa pagkakagapos ng kolonyalismo at kawalang-katarungan. Ang tula ay sumasalamin sa matayog
+                        na layunin ng kabataan sa pagtataguyod ng isang mas malayang bayan.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Work 4 -->
+            <div class="work-item">
+                <img src="images/sa_aking_mga_kabata.jpg" alt="Sa Aking Mga Kabata">
+                <h2>Sa Aking Mga Kabata</h2>
+                <p>Isang tula tungkol sa pagmamahal sa sariling wika at bayan.</p>
+                <p><br><strong>Petsa ng Pagkakalathala:</strong> 1869</p>
+
+                <h3>Tema:</h3>
+                <p>Kahalagahan ng pagmamahal sa sariling wika bilang simbolo ng kalayaan at pagkakakilanlan ng isang bansa.</p>
+
+                <h3>Epekto:</h3>
+                <p>
+                    Nagtuturo ito sa mga kabataan na pahalagahan at mahalin ang sariling wika bilang simbolo ng kanilang pagka-Pilipino.
+                </p>
+                <a href="#" class="learn-more" onclick="showModal('sa-aking-mga-kabata-modal')">Learn More</a>
+            </div>
+
+            <!-- Sa Aking Mga Kabata Modal -->
+            <div id="sa-aking-mga-kabata-modal" class="modal">
+                <div class="modal-content">
+                    <!-- Close Button -->
+                    <span class="close" onclick="closeModal('sa-aking-mga-kabata-modal')">&times;</span>
+
+                    <!-- Title -->
+                    <h2>Sa Aking Mga Kabata</h2>
+
+                    <!-- Introduction Section -->
+                    <p>
+                        <strong><em>Sa Aking Mga Kabata</em></strong> ay isang tula tungkol sa halaga ng pagmamahal at paggamit ng sariling wika.
+                        Madalas itong iniuugnay kay Dr. José Rizal, ngunit may mga kontrobersiya ukol sa kung siya nga ang orihinal na sumulat nito.
+                        Ang tula ay patungkol sa malalim na pagmamahal sa wika bilang isang mahalagang bahagi ng kalayaan at kultura ng bayan.
+                    </p>
+                    <br>
+
+                    <!-- Tagalog Version Section -->
+                    <h3>Teksto ng Tula:</h3>
+                    <pre>
+Kapagka ang baya’y sadyang umiibig
+Sa langit salitang kaloob ng langit,
+Sanlang kalayaan nasa ring masapi
+Katulad ng ibong nasa himpapawid.
+
+Pagka’t ang salita’y isang kahatulan
+Sa bayan, sa nayo't mga kaharian.
+At ang isang tao’y katulad, kabagay
+Ng alin mang likha noong kalayaan.
+
+Ang hindi magmahal sa kanyang salita
+Mahigit sa hayop at malansang isda,
+Kaya ang marapat pagyamanin kusa
+Na tulad sa inang tunay na nagpala.
+
+Ang Wikang Tagalog tulad din sa Latin,
+Sa Ingles, Kastila, at salitang anghel,
+Sapagkat ang Poong maalam tumingin
+Ang siyang naggagawad, nagbibigay sa atin.
+
+Ang salita nati’y tulad din sa iba,
+Na may alfabeto at sariling letra,
+Na kaya nawala’y dinatnan ng sigwa
+Ang lunday sa lawa noong dakong una.
+        </pre>
+
+                    <!-- Interpretation Section -->
+                    <h3>Pakahulugan ng Tula:</h3>
+                    <p>
+                        Sa tula, binibigyang-diin ang kahalagahan ng wika bilang pagpapahayag ng kalayaan at pagkakakilanlan ng bayan.
+                        Ayon sa tula, ang sinumang hindi nagmamahal sa sariling wika ay mas mababa pa sa hayop.
+                        Ang tula ay pumupuri sa Tagalog, na inihahalintulad sa iba’t ibang wika sa mundo, tulad ng Latin at Kastila.
+                        Sa huli, binabanggit nito ang pagkawala ng alpabeto ng mga katutubong Pilipino bunga ng kolonisasyon.
+                    </p>
+                    <br>
+
+                    <!-- Significance Section: Insights -->
+                    <h3>Kahalagahan:</h3>
+                    <p>
+                        <em>Sa Aking Mga Kabata</em> ay isa sa mga piraso ng panitikan na nagpapabatid ng kahalagahan ng wika bilang pundasyon ng
+                        kalayaan at kultura. Patuloy itong nagsisilbing inspirasyon upang muling pagyamanin ang wikang sariling atin.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+    <footer>
+        <p>
+            All content on this website is for educational purposes only. <br>All rights reserved to their respective owners.
+            <br>&copy; 2025
+        </p>
+    </footer>
+        <script src="scripts/buhay-akda.js"></script>
+</body>
+</html>
