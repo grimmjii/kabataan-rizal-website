@@ -160,6 +160,7 @@ main h2 {
 .slide {
     display: none; /* Hide all slides by default */
     width: 100%;
+    font-family: 'Merriweather', serif;
     text-align: center;
 }
 
