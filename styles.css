@@ -1,70 +1,147 @@
-/* General Styles */
-body {
-    font-family: "Times New Roman", serif;
-    line-height: 1.6;
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+
+*{
     margin: 0;
     padding: 0;
-    background-color: #fdfde3; /* Light beige for a historical feel */
-    color: #333; /* Neutral text color */
+    font-family: 'Playfair Display', serif;
 }
 
-/* Header Styles */
-header {
-    background: #900c3f; /* Deep red, symbolizing patriotism */
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-    border-bottom: 5px solid #ffc107; /* Golden-yellow accent for Filipino colors */
+body {
+    overflow-x: hidden; /* This disables horizontal scrolling */
 }
 
-header h1 {
+html, body {
     margin: 0;
-    font-size: 2.8em;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden; /* Disable horizontal scrolling */
+}
+.banner{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)), url(images/Rizal_Monument_on_Rizal_Day.jpg);
+    background-size: cover;
+    background-position: center;
 }
 
-header p {
-    margin: 10px 0 0;
+.navbar{
+    width: 85%;
+    margin: auto;
+    padding: 15px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+}
+
+.logo{
+    width: 120px;
+    cursor: pointer;
+}
+
+.navbar ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'open sans', serif;
+    font-weight: 700;
     font-size: 1.2em;
 }
 
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 20px 0;
-    text-align: center;
+.navbar ul li a:hover {
+    color: #ffc107; /* Change font color to yellow when hovered */
+}
+.navbar ul li::after{
+    content:'';
+    height: 3px;
+    width: 0;
+    background: #900c3f;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+.navbar ul li:hover::after{
+    width: 100%;
 }
 
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-
-nav ul li a {
+.content{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: left;
+    margin-left: 10%;
     color: white;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1.1em;
+}
+
+.content span {
+    background-color: #ffc107; /* Background color only on text */
+    display: inline; /* Restrict background color to the text width */
+    padding: 2px 5px; /* Space around the text, if needed */
+    border-radius: 3px; /* Optional: Rounded edges for the background */
+}
+
+.content h2 {
+    font-size: 2rem; /* Adjust the font size for the h2 element */
+    font-weight: normal; /* Optional: Adjust font weight */
+    margin-bottom: 10px; /* Add spacing below the h2 element */
+}
+
+.content h1 {
+    font-size: 3rem; /* Adjust the font size for the h1 element */
+    font-weight: bold; /* Optional: Make the h1 text bold */
+    margin-top: 0; /* Ensure no unnecessary space above the h1 (optional) */
 }
 
 /* Main Section Styles */
 main {
     padding: 20px;
+    margin: 20px auto;
+    width: 70%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
 
+main span {
+    font-weight: bold;
+    color: #007BFF; /* Rizal-inspired blue */
+}
+
+.quote-container {
+    background-color: #fffbe7;
+    padding: 2rem;
+    border-radius: 2rem;
+    color: #000000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+main section {
+    margin-bottom: 20px;
+    background-color: #fffbe7;
+    display: inline-block;
+    padding: 10px 30px; /* Space around the text, if needed */
+    border-radius: 3px; /* Optional: Rounded edges for the background */
+}
 main h2 {
     color: #900c3f;
     border-bottom: 3px solid #ffc107;
     display: inline-block;
     margin-bottom: 10px;
-}
-
-main article {
-    margin-bottom: 20px;
-}
-
-main article h3 {
-    color: #333;
-    font-weight: bold;
 }
 
 /* Infographics and Quiz Sections */
@@ -74,7 +151,7 @@ main article h3 {
     border-radius: 10px;
     margin-top: 20px;
     color: #333;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 /* Footer Styles */
@@ -82,6 +159,7 @@ footer {
     background: #900c3f;
     color: white;
     text-align: center;
+    font-size: 0.80rem;
     padding: 10px 0;
     margin-top: 20px;
     border-top: 5px solid #ffc107;
