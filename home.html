@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home - Ang Papel ng Kabataan</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+    .sticky {
+        position: fixed;
+        top: 0;
+        left: 50%;
+        width: 100%;
+        z-index: 1000;
+        transition: all 0.3s ease;
+        padding: 0 145px;
+        box-sizing: border-box;
+    }
+    .scrolled {
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 10px;
+        color: #ffc107;
+    <div class="scrolled">Some content here</div>
+    }
+</style>
+
+    <script>
+        window.addEventListener("scroll", function() {
+            const navbar = document.querySelector(".navbar");
+            navbar.classList.toggle("scrolled", window.scrollY > 0);
+        });
+    </script>
+</head>
+<body>
+    <div class="banner"></div>
+        <div class="navbar sticky">
+            <img src="images/logo.png" class="logo" alt="logo">
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="buhay-akda.html">Buhay at Akda</a></li>
+                    <li><a href="hamon-kabataan.html">Hamon ng Kabataan</a></li>
+                    <li><a href="infographics.html">Infographics</a></li>
+                    <li><a href="quiz.html">Quiz</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+        </div>
+
+        <div class="content">
+            <h2>Malugod na Pagtanggap!</h2>
+            <h1>
+                <span>Tuklasin ang Papel ng</span><br>
+                <span>Kabataan sa Makabagong Lipunan</span>
+            </h1>
+        </div>
+    <main>
+        <section>
+            <h2>Alamin ang buhay, kasaysayan, at mga akda ni Rizal</h2>
+            <p>
+                Ang website na ito ay naglalayong ipakita ang <span>mahalagang papel ng kabataan sa nasyonalismo</span>,<br>
+                gamit ang mga aral mula sa <span>buhay at akda ni José Rizal</span>. Layunin din nitong kilalanin ang kanyang<br>
+                mga kontribusyon, ipakita ang kaugnayan ng kanyang aral sa mga isyung kinakaharap ng<br>
+                kabataan ngayon, at hikayatin ang aktibong pakikilahok para sa pagbabago at pag-unlad ng bayan.<br>
+                <br>Naglalaman ang website ng mga seksyon tulad ng <span><i>"Buhay at Akda ni Rizal"</i></span>, na tumatalakay sa<br>
+                kanyang talambuhay at mga obra; <span><i>"Mga Hamon ng Kabataan"</i></span>, na nag-uugnay ng mga aral ni Rizal<br>
+                sa modernong isyu; <span><i>"Infographics"</i></span>, na biswal na nagpapaliwanag ng mahahalagang ideya; at<br>
+                <span>"<i>Interactive Quiz"</i></span>, na sumusubok sa kaalaman tungkol kay Rizal at nasyonalismo. Ang lahat ng<br>
+                ito ay naglalayong magbigay-inspirasyon at magpalaganap ng makabayang kamalayan sa kabataan.
+            </p>
+        </section>
+        <div class="quote-container">
+            <img src="images/rizal.jpg" alt="Jose Rizal Quote" width="300" height="263" class="quote">
+        </div>
+    </main>
+    <footer>
+        <p><i>All content on this website are for educational purposes only.<br>
+            All rights reserved to their respective owners.</i> &copy; 2025</p>
+    </footer>
+</body>
+</html>
