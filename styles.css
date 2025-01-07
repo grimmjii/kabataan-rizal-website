@@ -7,21 +7,24 @@
 }
 
 body {
-    overflow-x: hidden; /* This disables horizontal scrolling */
+    margin: 0;
+    padding: 0;
 }
 
 html, body {
     margin: 0;
     padding: 0;
     width: 100%;
-    overflow-x: hidden; /* Disable horizontal scrolling */
+    overflow: auto;
+    overflow-x: visible;
 }
 .banner{
     width: 100%;
     height: 100vh;
     background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)), url(images/Rizal_Monument_on_Rizal_Day.jpg);
+    position: relative;
+    overflow: hidden;
     background-size: cover;
-    background-position: center;
 }
 
 .navbar{
