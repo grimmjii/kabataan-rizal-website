@@ -9,18 +9,23 @@
     .sticky {
         position: fixed;
         top: 0;
-        left: 50%;
         width: 100%;
         z-index: 1000;
         transition: all 0.3s ease;
-        padding: 0 145px;
-        box-sizing: border-box;
+        padding: 0 145px; /* Add horizontal padding to the navbar */
+        box-sizing: border-box; /* Make sure padding is included in the dimensions */
+        display: flex; /* Enable flexbox layout for the nav items */
+        justify-content: center;
     }
     .scrolled {
         background-color: rgba(0, 0, 0, 0.5);
         padding: 10px;
-        color: #ffc107;
+        color: #ffc107; /* Improve text visibility */
+        justify-content: space-between; /* Spread items evenly between the start and end */
     <div class="scrolled">Some content here</div>
+    }
+    .menu-item {
+        margin: 0 10px; /* Optional: Add spacing between menu items */
     }
 </style>
 
@@ -32,8 +37,8 @@
     </script>
 </head>
 <body>
-    <div class="banner"></div>
-        <div class="navbar">
+    <div class="banner">
+        <div class="navbar sticky">
             <img src="images/logo.png" class="logo" alt="logo">
                 <ul>
                     <li><a href="home.html">Home</a></li>
@@ -44,7 +49,6 @@
                     <li><a href="about.html">About</a></li>
                 </ul>
         </div>
-
         <div class="content">
             <h2>Malugod na Pagtanggap!</h2>
             <h1>
@@ -52,6 +56,9 @@
                 <span>Kabataan sa Makabagong Lipunan</span>
             </h1>
         </div>
+    </div>
+
+
     <main>
         <section>
             <h2>Alamin ang buhay, kasaysayan, at mga akda ni Rizal</h2>
