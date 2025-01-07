@@ -47,14 +47,14 @@ html, body {
 }
 
 .logo {
-    width: 100px; /* Reduced logo size */
+    width: 120px; /* Reduced logo size */
     cursor: pointer;
 }
 
 .navbar ul li {
     list-style: none;
     display: inline-block;
-    margin: 0 30px; /* Reduced margin for menu items */
+    margin: 0 25px; /* Reduced margin for menu items */
     position: relative;
 }
 
@@ -64,7 +64,7 @@ html, body {
     text-transform: uppercase;
     font-family: 'open sans', serif;
     font-weight: 700;
-    font-size: 1em; /* Reduced font size */
+    font-size: 1.2em; /* Reduced font size */
 }
 
 .navbar ul li a:hover {
@@ -148,6 +148,7 @@ main h4 {
     display: inline-block;
     margin-bottom: 10px;
 }
+
 /* Works Section */
 #works {
     padding: 20px;
