@@ -7,53 +7,54 @@
 }
 
 body {
-    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
 }
 
 html, body {
     margin: 0;
     padding: 0;
     width: 100%;
+    overflow: auto;
+    overflow-x: visible;
 }
+
 .banner{
     width: 100%;
-    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)), url(images/luneta_park.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)), url(images/park.jpg);
     background-size: cover;
     background-position: 50% 50%;
     height: 350px; /* Cropped to half of the original height */
     position: relative;
-    z-index: 1;
+    overflow: hidden;
 }
 
 .navbar {
-    width: 85%;
-    max-width: 1400px;
-    margin: auto;
-    padding: 15px 0;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+    width: 100%;
+    padding: 10px 0; /* Reduced padding to make it smaller */
     position: fixed;
     top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 100;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
 @media (max-width: 768px) {
     .navbar {
-        width: 100%; /* Full width for narrow viewports */
+        padding: 8px 0; /* Smaller padding on smaller screens */
     }
 }
 
-.logo{
-    width: 120px;
+.logo {
+    width: 120px; /* Reduced logo size */
     cursor: pointer;
 }
 
 .navbar ul li {
     list-style: none;
     display: inline-block;
-    margin: 10px 20px;
+    margin: 0 25px; /* Reduced margin for menu items */
     position: relative;
 }
 
@@ -63,7 +64,7 @@ html, body {
     text-transform: uppercase;
     font-family: 'open sans', serif;
     font-weight: 700;
-    font-size: 1.2em;
+    font-size: 1.2em; /* Reduced font size */
 }
 
 .navbar ul li a:hover {
