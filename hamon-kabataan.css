@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Playfair Display', serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow: auto;
+    overflow-x: visible;
+}
+
+.banner{
+    width: 100%;
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)), url(images/rizal-monument.jpg);
+    background-size: cover;
+    background-position: 45% 45%;
+    height: 350px; /* Cropped to half of the original height */
+    position: relative;
+    overflow: hidden;
+}
+
+.navbar {
+    width: 100%;
+    padding: 10px 0; /* Reduced padding to make it smaller */
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 8px 0; /* Smaller padding on smaller screens */
+    }
+}
+
+.logo {
+    width: 120px; /* Reduced logo size */
+    cursor: pointer;
+}
+
+.navbar ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 25px; /* Reduced margin for menu items */
+    position: relative;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'open sans', serif;
+    font-weight: 700;
+    font-size: 1.2em; /* Reduced font size */
+}
+
+.navbar ul li a:hover {
+    color: #ffc107;
+}
+
+.navbar ul li::after {
+    content: '';
+    height: 2px; /* Reduced underline height */
+    width: 0;
+    background: #900c3f;
+    position: absolute;
+    left: 0;
+    bottom: -8px; /* Adjusted position for the underline */
+    transition: 0.5s;
+}
+
+.navbar ul li:hover::after {
+    width: 100%;
+}
+
+.content{
+    position: absolute; /* Stays positioned inside .banner */
+    top: 70%; /* Centers vertically */
+    left: 50%; /* Centers horizontally */
+    transform: translate(-50%, -50%); /* Perfect horizontal and vertical centering */
+    color: white;
+    text-align: center;
+    width: 100%;
+}
+
+.content span {
+    display: inline-block; /* More consistent padding handling */
+    padding: 2px 5px; /* Space around the text, if needed */
+    border-radius: 0.3rem; /* Optional: Rounded edges for the background */
+}
+
+/* Main Section Styles */
+main {
+    flex-wrap: wrap; /* Wrap flex layout for smaller screens */
+    padding: 20px;
+    margin: 20px auto;
+    width: 70%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main span {
+    font-weight: bold;
+    color: #007BFF; /* Rizal-inspired blue */
+}
+
+main section {
+    margin-bottom: 20px;
+    background-color: #fffff0; /* Slightly increase contrast */
+    display: inline-block;
+    padding: 10px 30px; /* Space around the text, if needed */
+    border-radius: 3px; /* Optional: Rounded edges for the background */
+}
+main h2 {
+    color: #900c3f;
+    border-bottom: 3px solid #ffc107;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+main h3 {
+    color: #000000;
+    font-weight: bold;
+    border-bottom: 3px solid #ffc107;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+main h4 {
+    color: #000000;
+    border-bottom: 3px solid #ffc107;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+#hamon-kabataan p {
+    line-height: 1.5; /* Adjust the line spacing (default is 1.5, smaller values decrease space) */
+    margin-bottom: 1em; /* Control space between paragraphs */
+    margin-right: auto;
+    margin-left: 7%;
+    width: 70%;
+    text-indent: 2em; /* Keep the first-line indentation */
+}
+
+/* Styling the Articles Section */
+#articles {
+    display: flex; /* Switch to a flexbox layout for the section container */
+    flex-wrap: wrap; /* Allow articles to wrap into columns */
+    gap: 20px; /* Add spacing between items */
+    justify-content: center; /* Equal spacing between items */
+}
+
+#articles h2 {
+    width: 100%; /* Ensure the title spans the full width */
+    text-align: center; /* Center the section heading */
+    color: #900c3f;
+    border-bottom: 3px solid #ffc107;
+    margin-bottom: 20px;
+}
+
+article a {
+    text-decoration: none; /* Removes the underline from the hyperlink */
+    color: #0066cc; /* Makes the link a subtle blue */
+    font-style: italic; /* Gives the citation an italicized look */
+}
+
+article a:hover {
+    text-decoration: underline; /* Adds underline when hovered */
+}
+
+/* Styling Individual Article Items */
+#articles article {
+    display: flex; /* Flexbox to allow alignment of content inside the article */
+    flex-direction: column; /* Align content vertically */
+    padding: 20px;
+    background: #fffff0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex: 0 0 calc(50% - 20px); /* Calculate the width for two columns while accounting for the gap */
+    box-sizing: border-box; /* Ensures padding/margin are included in the width */
+}
+
+#articles article:hover {
+    transform: scale(1.02); /* Slight zoom-in effect on hover */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+}
+
+/* Styling Article Titles */
+#articles article h3 {
+    margin-bottom: 10px;
+    color: #900c3f;
+    font-weight: bold;
+    border-bottom: 2px solid #ffc107;
+}
+
+/* Paragraph inside articles */
+#articles article p {
+    margin: 1%;
+    color: #444;
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+    #articles article {
+        flex: 0 0 100%; /* Each article will take up the full width on smaller screens */
+    }
+
+    #articles {
+        gap: 15px; /* Reduce gap for smaller screens */
+    }
+}
+
+/* Footer Styles */
+footer {
+    position: relative; /* Place footer properly within the flow */
+    bottom: 0; /* Fix it at the bottom */
+    background: #900c3f;
+    color: white;
+    text-align: center;
+    font-size: 0.80rem;
+    padding: 10px 0;
+    margin-top: 20px;
+    border-top: 5px solid #ffc107;
+}
+
+footer p {
+    margin: 0;
+}
