@@ -92,11 +92,12 @@ html, body {
     transform: translateY(-50%);
     text-align: left;
     margin-left: 10%;
-    color: white;
+    color: #fffbe7;
 }
 
 .content span {
-    background-color: #ffc107; /* Background color only on text */
+    color: #fffbe7;
+    font-weight: bold ;
     display: inline-block; /* Restrict background color to the text width */
     padding: 2px 5px; /* Space around the text, if needed */
     border-radius: 3px; /* Optional: Rounded edges for the background */
