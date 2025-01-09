@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About - This Website</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="about.css">
+    <style>
+        .sticky {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            transition: all 0.3s ease;
+            padding: 0 145px;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+        }
+        .scrolled {
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            color: #ffc107;
+            justify-content: space-between;
+        <div class="scrolled">Some content here</div>
+        }
+        .menu-item {
+            margin: 0 10px;
+        }
+    </style>
+
+    <script>
+        window.addEventListener("scroll", function() {
+            const navbar = document.querySelector(".navbar");
+            navbar.classList.toggle("scrolled", window.scrollY > 0);
+        });
+    </script>
+</head>
+<body>
+<div class="banner">
+    <div class="navbar sticky">
+        <a href="home.html">
+            <img src="images/logo.png" class="logo" alt="logo">
+        </a>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="buhay-akda.html">Buhay at Akda</a></li>
+            <li><a href="hamon-kabataan.html">Hamon ng Kabataan</a></li>
+            <li><a href="infographics.html">Infographics</a></li>
+            <li><a href="quiz.html">Quiz</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+    </div>
+
+    <div class="content-banner">
+        <h1>
+            <span>About This Website</span>
+        </h1>
+    </div>
+</div>
+
+<main>
+    <section id="about-page" class="content-section">
+        <h2>About Page</h2>
+        <p>
+            Ang Republic Act No. 1425 o Rizal Law ay nag-uutos na ang lahat ng paaralan sa Pilipinas ay magturo ng mga kurso tungkol
+            sa Buhay, Mga Gawa, at mga Sinulat ni José Rizal. Ang website na ito ay bahagi ng aming proyekto para sa kursong Life & Works of Rizal.
+        </p>
+
+        <h3>Mga Taong Kasangkot:</h3>
+        <ul class="personnel-list">
+            <li>
+                <strong>Web Developer/Designer:</strong>
+                <ul class="sub-list">
+                    <li>Cablao, John Cedric</li>
+                </ul>
+            </li>
+            <li>
+                <strong>Researchers/Writers:</strong>
+                <ul class="sub-list">
+                    <li>Aleido, Jorge Christian</li>
+                    <li>Caliao, Mharlo Jhay</li>
+                    <li>Daniolco, Christopher</li>
+                    <li>De Guzman, Sean Railey</li>
+                    <li>Doles, Zyndrex</li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+
+    <section id="site-purpose">
+        <h2>Tungkol sa Website</h2>
+        <p>
+            Ang website na ito ay isang inisyatibong naglalayong magbigay-liwanag sa diwa ng nasyonalismo at inspirasyon na hatid ni Dr. Jose Rizal sa makabagong panahon. Nilikha ito upang maging mapagkukunan ng kaalaman para sa mga kabataang Pilipino na nais alamin at maunawaan ang mga aral na iniwan ng ating pambansang bayani.
+
+            <br><br>Sa pamamagitan ng kanyang mga akda, buhay, at adbokasiya, nais naming ipakita kung paano nananatiling makabuluhan ang kanyang mga prinsipyo sa gitna ng mga hamon ng kasalukuyang lipunan. Ang mga seksyon ng website ay naglalaman ng mga impormasyon tungkol sa kanyang talambuhay, pagsusuri sa kanyang mga obra, at koneksyon ng kanyang mga ideya sa mga isyu ng kabataan ngayon.
+
+            <br><br>Layunin naming hikayatin ang kabataan na ipagpatuloy ang adbokasiya ni Rizal para sa edukasyon, kalayaan, at pagkakaisa. Naniniwala kami na sa pamamagitan ng pagpapalaganap ng kaalaman tungkol sa kanyang buhay at mga kontribusyon, maitataguyod ang mas malalim na pag-unawa at pagpapahalaga sa pagiging Pilipino.
+
+            <br><br>Ang proyektong ito ay bahagi ng aming pag-aaral sa kursong Buhay at mga Akda ni Rizal, at patunay ng aming pagsisikap na maikalat ang diwa ng kanyang mga aral. Nawa’y maging inspirasyon ito upang mas lalong pahalagahan ang ating kasaysayan at gampanan ang ating tungkulin bilang mamamayan ng Pilipinas.
+        </p><br>
+        <h2>Open Source</h2>
+        <p id="open-source">
+            The source code for this website is available at this <a href="https://github.com/grimmjii/kabataan-rizal-website/tree/main" target="_blank">repository</a>.
+        </p>
+    </section>
+
+    <section id="mission">
+        <h2>Misyon</h2>
+        <p>
+            Ang aming misyon ay hikayatin ang mga kabataan na pahalagahan ang kasaysayan at buhay ni Rizal bilang pundasyon ng
+            pagiging makabayan. Naniniwala kami na ang kaalaman sa mga akda, buhay, at adbokasiya ni Rizal ay susi sa pagharap sa
+            mga hamon ng makabagong panahon.
+        </p>
+    </section>
+
+    <section id="why-rizal">
+        <h2>Bakit si Jose Rizal?</h2>
+        <p>
+            Si Dr. Jose Rizal ay higit pa sa isang pambansang bayani—siya ay simbolo ng talino, tapang, at pagkilos para sa bayan. Ang
+            kanyang buhay at mga gawa tulad ng <em>Noli Me Tangere</em> at <em>El Filibusterismo</em> ay naglalaman ng mga
+            mahalagang aral na napapanahon pa rin sa kasalukuyan.
+        </p>
+    </section>
+
+    <section id="goal">
+        <h2>Layunin ng Website</h2>
+        <ul class="goal-list">
+            <li>Magbigay ng impormasyon tungkol sa buhay, akda, at kontribusyon ni Rizal.</li>
+            <li>
+                Himukin ang kabataan na magpatuloy sa kanyang adbokasiya para sa edukasyon, kalayaan, at pagkakaisa.
+            </li>
+            <li>
+                Magbahagi ng mga makabuluhang artikulo, infographics, at multimedia na naglalaman ng mga aral ni Rizal para sa kasalukuyang lipunan.
+            </li>
+        </ul>
+    </section>
+
+    <section id="audience">
+        <h2>Para Kanino ang Website na Ito?</h2>
+        <p>
+            Ang website na ito ay idinisenyo para sa mga mag-aaral, guro, at sinumang nagnanais matutunan at maunawaan ang
+            kahalagahan ni Rizal sa kasaysayan at sa kasalukuyan. Layon nitong maging gabay at inspirasyon sa lahat ng Pilipino na
+            magtaguyod ng pagbabago at kaunlaran.
+        </p>
+    </section>
+
+    <section id="credits">
+        <h2>Links & References</h2>
+        <h3>Used Cover Images in Akda:</h3>
+        <ul>
+            <li>admin. (2015). Exhibit-Rizal-Books-Noli-Fili. Philippine Folklife Museum Foundation | San Francisco, Ca.
+                <a href="https://philippinefolklifemuseum.org/exhibit-rizal-books-noli-fili/#" target="_blank">Link</a>
+            </li>
+            <li>Cristir Gabriel Magaway. (2015, January 29). Jose Rizal. Pinterest.
+                <a href="https://www.pinterest.com/pin/293648838179004515/" target="_blank">Link</a>
+            </li>
+            <li>Hazel. (2025). para sa kabataan. Issuu.
+                <a href="https://issuu.com/hazel0104/docs/a_la_juventud_filipina_final" target="_blank">Link</a>
+            </li>
+            <li>Cabanilla II, G. (2018, April 16). SA AKING MGA KABATA. YouTube.
+                <a href="https://www.youtube.com/watch?v=b03miETQ1q0" target="_blank">Link</a>
+            </li>
+        </ul>
+
+        <h3>Used Background Images in Each Webpage:</h3>
+        <ul>
+            <li>Newbound, M., & Newbound, S. (2017). Rizal Shrine, Manila, Philippines - GibSpain. GibSpain.
+                <a href="https://gibspain.com/listing/rizal-shrine-manila-philippines/" target="_blank">Link</a>
+            </li>
+            <li>Huber, G. (2009). Monument of Jose Rizal in the Rizal Park. Austria-Forum.
+                <a href="https://austria-forum.org/af/Geography/Asia/Philippines/Pictures/Manila/Rizal_Monument_Rizal_Park" target="_blank">Link</a>
+            </li>
+            <li>Handtell. (2009, December 30). File:Rizal Monument on Rizal Day.jpg - Wikipedia.
+                <a href="https://en.wikipedia.org/wiki/File:Rizal_Monument_on_Rizal_Day.jpg" target="_blank">Link</a>
+            </li>
+            <li>jenn4u2luv. (2017). Reddit - Dive into anything. Reddit.com.
+                <a href="https://www.reddit.com/r/Philippines/comments/7n1exd/rizal_monument_in_madrid_spain/" target="_blank">Link</a>
+            </li>
+            <li>Joyfull. (2012, April). Rizal monument. Dreamstime.
+                <a href="https://www.dreamstime.com/stock-images-rizal-monument-image24484704" target="_blank">Link</a>
+            </li>
+            <li>Tung, C. S. (2009, November 25). Rizal Park. Flickr.
+                <a href="https://www.flickr.com/photos/bc0210/4138749734/in/photolist-7iJb73-7iJbDQ-7iEdu4-7iHRqu-7iDvT8-7iHijU-7iCAAV-7iDBRr-7iGnyJ-7iEp78-7iErmR-7iGiJC-7iCvQz-7iDMAz-7iDxbP-7iHqpS-7iGm7y-7iDm7p-7iEocr-7iHm2u-7iHiXs-7iCK2t-7iDwvr-7iJeZW-7iHtNj-7iHyKG-7iDAin-7iHjAm-7iHzvu-7iDxKZ-7iHo2y-7iHkoQ-7iDB5M-7iEhR2-7iHoWf-7iHfKq-7iCqwz-7iDmPV-7iE7LD-7iGjrb-7iGjWy-7iHday-7iHumu-7iEnwn-7iHn53-7iJkAd-7iDLgk-7iHuS3-7iHeFj-7iHCWW" target="_blank">Link</a>
+            </li>
+        </ul>
+
+        <h3>Mga Sanggunian:</h3>
+        <ul>
+            <li>Rizal, J. (1887). Noli Me Tangere. Retrieved from
+                <a href="https://en.wikipedia.org/wiki/Noli_Me_T%C3%A1ngere_%28novel%29" target="_blank">Link</a>
+            </li>
+            <li>Rizal, J. (1891). El Filibusterismo. Retrieved from
+                <a href="https://en.wikipedia.org/wiki/El_filibusterismo" target="_blank">Link</a>
+            </li>
+            <li>Rizal, J. (1879). Sa Aking Mga Kabata. Retrieved from
+                <a href="https://www.tagaloglang.com/sa-aking-mga-kababata-jose-rizal/" target="_blank">Link</a>
+            </li>
+            <li>Constantino, R. (1970). Veneration without understanding. In Dissent and Counter-Consciousness
+                (pp. 108-116). Retrieved from
+                <a href="http://www.xeniaeditrice.it/firstfilipinoocrpdf.pdf" target="_blank">Link</a>
+            </li>
+            <li>National Historical Commission of the Philippines. (n.d.). Jose Rizal: Philippine national hero. Retrieved from
+                <a href="https://nhcp.gov.ph" target="_blank">Link</a>
+            </li>
+            <li>Jose Rizal: Philippine national hero. (n.d.). Retrieved from
+                <a href="https://www.joserizal.com" target="_blank">Link</a>
+            </li>
+            <li>Carunungan, R. (2019, June 19). Kabataan: Pag-asa pa rin ba ng bayan? Rappler. Retrieved from
+                <a href="https://www.rappler.com" target="_blank">Link</a>
+            </li>
+            <li>Guerrero, L. (1998). The First Filipino: A Biography of Jose Rizal. Guerrero Publishing.
+                <a href="https://archive.org/details/firstfilipino0000leon" target="_blank">Link</a>
+            </li>
+            <li>Zaide, G. (2003). Jose Rizal: Life, Works, and Writings of a Genius, Writer, Scientist, and National Hero. Rex Book Store.
+                <a href="https://www.studocu.com/ph/document/feu-institute-of-technology/english/the-life-of-jose-rizal-soft-book/24138524" target="_blank">Link</a>
+            </li>
+            <li>Agoncillo, T. (1990). History of the Filipino People. Garotech Publishing.
+                <a href="https://archive.org/details/historyoffilipin00teod" target="_blank">Link</a>
+            </li>
+            <li>Constantino, R. (2000). The Philippines: A Past Revisited. Tala Publishing.
+                <a href="https://www.goodreads.com/book/show/4767130-the-philippines" target="_blank">Link</a>
+            </li>
+            <li>ABS-CBN News. (2023, Oktubre 14). Social media activism, makabagong boses ng Pinoy netizens.
+                <a href="https://www.abs-cbn.com/life/multimedia/video/10/14/23/social-media-activism-makabagong-boses-ng-pinoy-netizens" target="_blank">Link</a>
+            </li>
+            <li>World Bank. (2024, Hunyo 29). World Bank approves $500 million loan to repair disaster-hit schools in the Philippines.
+                <a href="https://www.worldbank.org/en/news/press-release/2024/06/29/world-bank-approves-500-million-loan-to-repair-disaster-hit-schools-in-the-philippines" target="_blank">Link</a>
+            </li>
+            <li>YouthLed PH. (n.d.). Youth empowerment initiatives in the Philippines.
+                <a href="https://www.instagram.com/youthledph/" target="_blank">Link</a>
+            </li>
+            <li>Craig, A. (2005, January 8). Lineage, Life and Labors of José Rizal: Philippine Patriot. Gutenberg.org.
+                <a href="https://www.gutenberg.org/files/6867/6867-h/6867-h.htm" target="_blank">Link</a>
+            </li>
+            <li>Jose Rizal University. (2004). Jose Rizal Website. Joserizal.ph.
+                <a href="http://www.joserizal.ph/in01.html" target="_blank">Link</a>
+            </li>
+        </ul>
+    </section>
+</main>
+<footer>
+    <p><i>All content on this website are for educational purposes only.<br>
+        All rights reserved to their respective owners.</i> &copy; 2025</p>
+</footer>
+</body>
+</html>

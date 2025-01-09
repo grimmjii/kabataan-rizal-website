@@ -1,0 +1,338 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Playfair Display', serif;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.banner{
+    width: 100%;
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)), url(images/rizal-madrid.jpg);
+    background-size: cover;
+    background-position: 35% 35%;
+    height: 350px;
+    position: relative;
+    overflow: hidden;
+}
+
+.navbar {
+    width: 100%;
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 8px 0;
+    }
+}
+
+.logo{
+    width: 120px;
+    cursor: pointer;
+}
+
+.navbar ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 25px;
+    position: relative;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'open sans', serif;
+    font-weight: 700;
+    font-size: 1.2em;
+}
+
+.navbar ul li a:hover {
+    color: #ffc107;
+}
+
+.navbar ul li::after{
+    content:'';
+    height: 3px;
+    width: 0;
+    background: #900c3f;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+
+.navbar ul li:hover::after{
+    width: 100%;
+}
+
+.content-banner {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    width: 100%;
+}
+
+.content-banner span {
+    display: inline-block;
+    padding: 2px 5px;
+    border-radius: 0.3rem;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        width: 100%;
+    }
+    .content h1 {
+        font-size: 2rem;
+        font-weight: bold;
+        margin-top: 0;
+    }
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px; /* Space between columns */
+    padding: 20px;
+    margin: 20px auto;
+    width: 90%; /* Ensures it adapts well to different screen sizes */
+    box-sizing: border-box;
+}
+
+main span {
+    font-weight: bold;
+    color: #007BFF;
+}
+
+main section {
+    flex: 1 1 calc(50% - 40px); /* 50% width minus gap for two columns */
+    max-width: 45%; /* Prevents it from becoming too wide */
+    margin-bottom: 20px;
+    background-color: #fffbe7;
+    padding: 20px;
+    border-radius: 3px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional for design enhancement */
+    text-align: left;
+}
+
+/* For smaller screens */
+@media (max-width: 768px) {
+    main section {
+        flex: 1 1 100%; /* Single column for mobile view */
+        max-width: 100%; /* Full width for smaller screens */
+    }
+}
+
+main h2 {
+    color: #900c3f;
+    border-bottom: 3px solid #ffc107;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.goal-list {
+    padding-left: 40px; /* Adds indentation to the list */
+    margin-bottom: 20px; /* Creates space below the list */
+}
+
+.goal-list li {
+    line-height: 1.8; /* Improves readability with extra spacing between list items */
+}
+
+/* General list styling */
+.personnel-list {
+    list-style-type: none; /* Removes default bullets */
+    padding-left: 0; /* Removes indentation for the outer list */
+}
+
+.personnel-list li {
+    margin-bottom: 15px; /* Adds spacing between main categories */
+    font-size: 1.1rem; /* Increases font size for better readability */
+}
+
+/* Styling for roles (e.g., Web Developer/Designer, Researchers/Writers) */
+.personnel-list li strong {
+    color: #2c3e50; /* Darker color for better contrast */
+    font-weight: bold; /* Highlights the roles */
+    display: block; /* Makes it visually distinct */
+    margin-bottom: 5px; /* Adds spacing below the role title */
+}
+
+/* Sub-list styling (individual names) */
+.sub-list {
+    list-style-type: disc; /* Adds bullets to the nested list */
+    padding-left: 20px; /* Indents the nested list */
+}
+
+.sub-list li {
+    color: #34495e; /* Slightly lighter color compared to the role title */
+    font-size: 1rem; /* Keeps text slightly smaller than the roles */
+}
+
+/* Optional additional styling for hover effect */
+.sub-list li:hover {
+    color: #3498db; /* Changes color on hover */
+    text-decoration: underline; /* Underlines text when hovered */
+}
+
+.content-section {
+    margin-bottom: 40px;
+}
+
+.content-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #900c3f;
+}
+
+.content-section h3 {
+    color: #ffc107;
+    margin-bottom: 20px;
+}
+
+.content-section ul {
+    list-style-type: disc;
+    padding-left: 40px;
+    margin-top: 10px;
+    line-height: 1.5;
+}
+
+.content-section p {
+    margin-bottom: 20px;
+    line-height: 1.6;
+    color: #555; /* Secondary text color */
+}
+
+#open-source a {
+    color: #900c3f; /* Match theme */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+#open-source a:hover {
+    color: #ffc107; /* Highlight color on hover */
+    text-decoration: underline;
+}
+
+/* General Section Styling */
+#credits {
+    background-color: #fffbe7;
+    padding: 30px;
+    border-radius: 5px;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#credits h2 {
+    font-size: 2rem;
+    color: #900c3f; /* Primary theme color */
+    margin-bottom: 15px;
+    border-bottom: 3px solid #ffc107;
+    padding-bottom: 10px;
+    display: inline-block;
+}
+
+/* Subheadings */
+#credits h3 {
+    font-size: 1.5rem;
+    color: #007bff; /* Accent color for subheadings */
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+/* List Styling */
+#credits ul {
+    list-style-type: disc;
+    margin-left: 40px;
+    line-height: 1.8;
+    color: #555; /* Text color for better readability */
+}
+
+#credits ul li {
+    margin-bottom: 10px;
+}
+
+/* Styling Links */
+#credits a {
+    color: #900c3f; /* Match theme */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+#credits a:hover {
+    color: #ffc107; /* Highlight color on hover */
+    text-decoration: underline;
+}
+
+/* Blockquotes or Notes */
+#credits blockquote {
+    font-style: italic;
+    background-color: #f7f7f7;
+    padding: 15px 20px;
+    border-left: 5px solid #900c3f; /* Accent border */
+    border-radius: 3px;
+    margin: 20px 0;
+}
+
+/* Spacing Between Entries */
+#credits li {
+    margin-bottom: 15px;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    #credits {
+        padding: 20px;
+    }
+
+    #credits h2 {
+        font-size: 1.8rem;
+    }
+
+    #credits h3 {
+        font-size: 1.3rem;
+    }
+
+    #credits ul {
+        margin-left: 20px;
+    }
+}
+
+footer {
+    background: #900c3f;
+    color: white;
+    text-align: center;
+    font-size: 0.80rem;
+    padding: 10px 0;
+    margin-top: 20px;
+    border-top: 5px solid #ffc107;
+}
+
+footer p {
+    margin: 0;
+}
